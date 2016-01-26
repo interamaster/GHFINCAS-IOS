@@ -12,6 +12,7 @@
 		788B65D31C57EF5100081ABB /* ILAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 788B65D21C57EF5100081ABB /* ILAlertView.m */; };
 		788B65D61C57F82F00081ABB /* fondo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 788B65D51C57F82F00081ABB /* fondo2.jpg */; };
 		788B65D91C57FB4700081ABB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 788B65D81C57FB4700081ABB /* LoginViewController.m */; };
+		78BC73BF1C582261001E2AFB /* UCZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC73BE1C582261001E2AFB /* UCZProgressView.m */; };
 		C80A0EBD1C576EF8003E2013 /* fondoghfincasactivity1.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EB71C576EF8003E2013 /* fondoghfincasactivity1.png */; };
 		C80A0EBE1C576EF8003E2013 /* jrdvsoftlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EB81C576EF8003E2013 /* jrdvsoftlogo.png */; };
 		C80A0EBF1C576EF8003E2013 /* logo7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EB91C576EF8003E2013 /* logo7.jpg */; };
@@ -55,6 +56,8 @@
 		788B65D51C57F82F00081ABB /* fondo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo2.jpg; sourceTree = "<group>"; };
 		788B65D71C57FB4700081ABB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		788B65D81C57FB4700081ABB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		78BC73BD1C582261001E2AFB /* UCZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCZProgressView.h; sourceTree = "<group>"; };
+		78BC73BE1C582261001E2AFB /* UCZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCZProgressView.m; sourceTree = "<group>"; };
 		C80A0EB71C576EF8003E2013 /* fondoghfincasactivity1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondoghfincasactivity1.png; sourceTree = "<group>"; };
 		C80A0EB81C576EF8003E2013 /* jrdvsoftlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jrdvsoftlogo.png; sourceTree = "<group>"; };
 		C80A0EB91C576EF8003E2013 /* logo7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo7.jpg; sourceTree = "<group>"; };
@@ -108,6 +111,7 @@
 		788B65CA1C57EE8300081ABB /* SPECIAL VIEWS */ = {
 			isa = PBXGroup;
 			children = (
+				78BC73BC1C582243001E2AFB /* PreogressView */,
 				788B65CB1C57EE9500081ABB /* ALERTVIEW */,
 			);
 			name = "SPECIAL VIEWS";
@@ -138,6 +142,15 @@
 				788B65D51C57F82F00081ABB /* fondo2.jpg */,
 			);
 			name = FONDO;
+			sourceTree = "<group>";
+		};
+		78BC73BC1C582243001E2AFB /* PreogressView */ = {
+			isa = PBXGroup;
+			children = (
+				78BC73BD1C582261001E2AFB /* UCZProgressView.h */,
+				78BC73BE1C582261001E2AFB /* UCZProgressView.m */,
+			);
+			name = PreogressView;
 			sourceTree = "<group>";
 		};
 		C8862CBA1C5623B000FB905E = {
@@ -347,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8862CD21C5623B000FB905E /* SecondViewController.m in Sources */,
+				78BC73BF1C582261001E2AFB /* UCZProgressView.m in Sources */,
 				C8862CCC1C5623B000FB905E /* AppDelegate.m in Sources */,
 				788B65D91C57FB4700081ABB /* LoginViewController.m in Sources */,
 				C8862CCF1C5623B000FB905E /* FirstViewController.m in Sources */,
