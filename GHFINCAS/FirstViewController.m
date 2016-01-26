@@ -59,4 +59,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+ 
+- (IBAction)logo_pulsado:(id)sender {
+    
+       NSLog(@"pulsado 7 veces logo!!!");
+}
 @end

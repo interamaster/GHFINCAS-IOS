@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="xaQ-vm-rmT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
@@ -15,6 +15,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo7.jpg" id="rn4-IN-6IG">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="475"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Uz0-49-F4r">
                                 <rect key="frame" x="0.0" y="477" width="196" height="142"/>
@@ -94,6 +95,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="0zU-aT-9IO" appends="YES" id="E9B-A6-RLr"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="EMPRESA" image="flat_empresaok2" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -102,6 +107,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="7" id="0zU-aT-9IO">
+                    <connections>
+                        <action selector="logo_pulsado:" destination="9pv-A4-QxB" id="UPK-aG-rp7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="352.5" y="-639.5"/>
         </scene>
@@ -209,15 +219,15 @@
             </objects>
             <point key="canvasLocation" x="1333" y="165"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="Fa7-21-jDt">
             <objects>
-                <viewController id="xaQ-vm-rmT" sceneMemberID="viewController">
+                <viewController id="xaQ-vm-rmT" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vU2-6r-xbb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="nU7-ch-Ts5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo2.jpg" id="nU7-ch-Ts5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -232,7 +242,10 @@
                                 <rect key="frame" x="36" y="417" width="281" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xaQ-vm-rmT" id="FLF-zf-3cD"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0tw-3l-3Vp">
                                 <rect key="frame" x="28" y="314" width="42" height="21"/>
@@ -257,6 +270,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="xaQ-vm-rmT" id="cpU-fw-4qg"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KRl-hq-Lg2">
                                 <rect key="frame" x="36" y="507" width="281" height="30"/>
@@ -266,6 +282,9 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="login_pulsado:" destination="xaQ-vm-rmT" eventType="touchUpInside" id="C1X-wj-AN4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mNJ-bh-BUd">
                                 <rect key="frame" x="78" y="574" width="210" height="30"/>
@@ -273,8 +292,11 @@
                                 <state key="normal" title="Aun sin cuenta?Crea una aqui!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sign_in_pulsado:" destination="xaQ-vm-rmT" eventType="touchUpInside" id="ciZ-eH-uOb"/>
+                                </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="KOT-6B-hnL">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="KOT-6B-hnL">
                                 <rect key="frame" x="25" y="469" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
@@ -282,10 +304,52 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="autolgin" destination="KOT-6B-hnL" id="JRL-YO-uXT"/>
+                        <outlet property="login" destination="39V-nI-qXa" id="lgh-rA-B10"/>
+                        <outlet property="password" destination="cra-Tc-eTe" id="bJP-k5-k87"/>
+                        <segue destination="49e-Tb-3d3" kind="modal" identifier="login_success" id="9p1-nS-sf7"/>
+                        <segue destination="W9u-UT-O6f" kind="modal" identifier="sign_in" id="5M2-e5-sj0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abo-Kk-4aw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-717.5" y="-409.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kcO-wo-ddQ">
+            <objects>
+                <viewController id="W9u-UT-O6f" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dOe-RG-DCf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IdC-sb-R60">
+                                <rect key="frame" x="196" y="382" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xpC-zT-wee">
+                                <rect key="frame" x="18" y="15" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xaQ-vm-rmT" kind="modal" id="L6e-bv-SYK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YK4-dF-aHO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nX1-hf-1T0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1017.5" y="401.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -319,6 +383,7 @@
         <image name="flat_empresaok2" width="25" height="25"/>
         <image name="flat_incidencias" width="25" height="25"/>
         <image name="flat_proveedores" width="25" height="25"/>
+        <image name="fondo2.jpg" width="2500" height="1875"/>
         <image name="logo7.jpg" width="500" height="500"/>
         <image name="logo7redondo 2.png" width="500" height="500"/>
     </resources>

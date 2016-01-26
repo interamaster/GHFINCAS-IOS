@@ -12,6 +12,8 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
+ 
+- (IBAction)logo_pulsado:(id)sender;
 
 
 @end
