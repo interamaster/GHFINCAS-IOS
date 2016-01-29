@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignupViewController : UIViewController{
+//PARA EL EMAIL IN BACKGROUND
+
+
+#import "SKPSMTPMessage.h"
+#import "NSData+Base64Additions.h" // for Base64 encoding
+
+
+
+@interface SignupViewController : UIViewController<SKPSMTPMessageDelegate>{
     
     NSString *PREF_EMAIL;
   

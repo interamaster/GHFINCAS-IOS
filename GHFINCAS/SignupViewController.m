@@ -11,6 +11,8 @@
 
 #import "ILAlertView.h"
 
+#import "SKPSMTPMessage.h"
+#import "NSData+Base64Additions.h" // for Base64 encoding
 
 @interface SignupViewController (){
     
@@ -28,6 +30,11 @@
     
     SendEmailOK=false;//PARASABER SI SE MANDO OK  O NO EL AUTO EMAIL de moemnto en false
     
+    
+    
+    //probamos a mandar e,mail del tiron....FUNCIONA!!!!
+    
+    [self sendEmailInBackground];
     
     
 }
@@ -154,5 +161,64 @@
     
     
 }
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////PARA EMAIL IN BACKGROUND///////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+-(void) sendEmailInBackground {
+    NSLog(@"Start Sending");
+    SKPSMTPMessage *emailMessage = [[SKPSMTPMessage alloc] init];
+    emailMessage.fromEmail = @"jrdvsoftyopozi@gmail.com"; //sender email address
+    emailMessage.toEmail = @"interamaster@gmail.com";  //receiver email address
+    emailMessage.relayHost = @"smtp.gmail.com";
+    //emailMessage.ccEmail =@"your cc address";
+    //emailMessage.bccEmail =@"your bcc address";
+    emailMessage.requiresAuth = YES;
+    emailMessage.login = @"jrdvsoftyopozi@gmail.com"; //sender email address
+    emailMessage.pass = @"sevilla4"; //sender email password
+    emailMessage.subject =@"nueva alta ghfincas ios";
+    emailMessage.wantsSecure = YES;
+    emailMessage.delegate = self; // you must include <SKPSMTPMessageDelegate> to your class
+    NSString *messageBody = @"your email body message";
+    //for example :   NSString *messageBody = [NSString stringWithFormat:@"Tour Name: %@\nName: %@\nEmail: %@\nContact No: %@\nAddress: %@\nNote: %@",selectedTour,nameField.text,emailField.text,foneField.text,addField.text,txtView.text];
+    // Now creating plain text email message
+    NSDictionary *plainMsg = [NSDictionary
+                              dictionaryWithObjectsAndKeys:@"text/plain",kSKPSMTPPartContentTypeKey,
+                              messageBody,kSKPSMTPPartMessageKey,@"8bit",kSKPSMTPPartContentTransferEncodingKey,nil];
+    emailMessage.parts = [NSArray arrayWithObjects:plainMsg,nil];
+    //in addition : Logic for attaching file with email message.
+    /*
+     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"filename" ofType:@"JPG"];
+     NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+     NSDictionary *fileMsg = [NSDictionary dictionaryWithObjectsAndKeys:@"text/directory;\r\n\tx-
+     unix-mode=0644;\r\n\tname=\"filename.JPG\"",kSKPSMTPPartContentTypeKey,@"attachment;\r\n\tfilename=\"filename.JPG\"",kSKPSMTPPartContentDispositionKey,[fileData encodeBase64ForData],kSKPSMTPPartMessageKey,@"base64",kSKPSMTPPartContentTransferEncodingKey,nil];
+     emailMessage.parts = [NSArray arrayWithObjects:plainMsg,fileMsg,nil]; //including plain msg and attached file msg
+     */
+    [emailMessage send];
+    // sending email- will take little time to send so its better to use indicator with message showing sending...
+}
+
+//Now, handling delegate methods :
+// On success
+
+-(void)messageSent:(SKPSMTPMessage *)message{
+    NSLog(@"delegate - message sent");
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message sent." message:nil delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alert show];
+}
+// On Failure
+-(void)messageFailed:(SKPSMTPMessage *)message error:(NSError *)error{
+    // open an alert with just an OK button
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+    [alert show];
+    NSLog(@"delegate - error(%ld): %@", (long)[error code], [error localizedDescription]);
+}
+
+
+
 
 @end
