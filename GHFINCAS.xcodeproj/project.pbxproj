@@ -36,6 +36,7 @@
 		C8862CFF1C57693D00FB905E /* flat_incidencias1.png in Resources */ = {isa = PBXBuildFile; fileRef = C8862CF61C57693D00FB905E /* flat_incidencias1.png */; };
 		C8862D001C57693D00FB905E /* flat_mail.png in Resources */ = {isa = PBXBuildFile; fileRef = C8862CF71C57693D00FB905E /* flat_mail.png */; };
 		C8862D011C57693D00FB905E /* flat_proveedores1.png in Resources */ = {isa = PBXBuildFile; fileRef = C8862CF81C57693D00FB905E /* flat_proveedores1.png */; };
+		C88989431C5B7D2D0080052E /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88989421C5B7D2D0080052E /* SignupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		C8862CF61C57693D00FB905E /* flat_incidencias1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flat_incidencias1.png; sourceTree = "<group>"; };
 		C8862CF71C57693D00FB905E /* flat_mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flat_mail.png; sourceTree = "<group>"; };
 		C8862CF81C57693D00FB905E /* flat_proveedores1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flat_proveedores1.png; sourceTree = "<group>"; };
+		C88989411C5B7D2D0080052E /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
+		C88989421C5B7D2D0080052E /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +186,8 @@
 				C8862CD11C5623B000FB905E /* SecondViewController.m */,
 				788B65D71C57FB4700081ABB /* LoginViewController.h */,
 				788B65D81C57FB4700081ABB /* LoginViewController.m */,
+				C88989411C5B7D2D0080052E /* SignupViewController.h */,
+				C88989421C5B7D2D0080052E /* SignupViewController.m */,
 				C8862CD31C5623B000FB905E /* Main.storyboard */,
 				C8862CD61C5623B000FB905E /* Images.xcassets */,
 				C8862CD81C5623B000FB905E /* LaunchScreen.xib */,
@@ -365,6 +370,7 @@
 				788B65D91C57FB4700081ABB /* LoginViewController.m in Sources */,
 				C8862CCF1C5623B000FB905E /* FirstViewController.m in Sources */,
 				788B65D31C57EF5100081ABB /* ILAlertView.m in Sources */,
+				C88989431C5B7D2D0080052E /* SignupViewController.m in Sources */,
 				C8862CC91C5623B000FB905E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

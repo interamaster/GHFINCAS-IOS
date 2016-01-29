@@ -21,6 +21,94 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    //al arrancar si ya existe los user y pass los ponemos:
+    
+      NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    PREF_EMAIL=[prefs stringForKey:@"email"];
+    
+    
+    PREF_PASSWORD=[prefs stringForKey:@"password"];
+    
+    PREF_BOOL_LOGINYAOK=[prefs boolForKey:@"loginyaok"];
+    
+    NSLog(@"email: %@",PREF_EMAIL);
+    NSLog(@"passw: %@",PREF_PASSWORD);
+    NSLog(@"loginyaok: %i",(int)PREF_BOOL_LOGINYAOK);
+    
+    
+    //si existen y ya hemos hecho antes login los ponemos:
+    
+    
+    if (PREF_EMAIL && PREF_PASSWORD &&PREF_BOOL_LOGINYAOK) {
+        self.login.text=PREF_EMAIL;
+        self.password.text=PREF_PASSWORD;
+
+    }
+    
+    
+    PREF_NUMERO_DEARRANQUES=[prefs integerForKey:@"numero_arranques"];
+    PREF_NUMERO_DEARRANQUES++;
+    
+     NSLog(@"numero de arranques: %i",PREF_NUMERO_DEARRANQUES);
+    
+    //guaradamos
+    [prefs setInteger:PREF_NUMERO_DEARRANQUES forKey:@"numero_arranques"];
+    
+    
+    [prefs synchronize];
+    
+    
+    //si ya hemos arranacadio algnua vez nos ahorramos el sacar el UDID(aqui nohay imei...)
+    if (PREF_NUMERO_DEARRANQUES<40) {
+        [self EncontrarPassword];
+        
+    }
+    
+}
+
+-(void)EncontrarPassword{
+    
+    
+    if( [UIDevice instancesRespondToSelector:@selector(identifierForVendor)] ) {
+        // iOS 6+
+        NSUUID *uid = [[UIDevice currentDevice] identifierForVendor];
+        NSString *uidStr = [uid UUIDString];
+        NSLog(@"para ios6+ el uidid:%@",uidStr);
+        NSString *passwordesdeUFID=[NSString stringWithFormat:@"%@%@",@"ghfincas",[uidStr substringToIndex:2]];
+        NSLog(@"password creado %@",passwordesdeUFID);
+        
+        
+        
+        
+        
+        //lo guaradamos en PREFS
+         NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setObject:passwordesdeUFID forKey:@"password"];
+        [prefs synchronize];
+        
+    }
+    
+    else
+    {
+        // before iOS 6, so just generate an identifier and store it
+        CFUUIDRef locUDIDRef = CFUUIDCreate(NULL);
+        CFStringRef locUDIDRefString = CFUUIDCreateString(NULL, locUDIDRef);
+        NSString *uidStr = [NSString stringWithString:(__bridge NSString *) locUDIDRefString];
+        CFRelease(locUDIDRef);
+        CFRelease(locUDIDRefString);
+        
+         NSLog(@"para ios6- el uidid:%@",uidStr);
+        
+        NSString *passwordesdeUFID=[NSString stringWithFormat:@"%@%@",@"ghfincas",[uidStr substringToIndex:2]];
+        NSLog(@"password creado %@",passwordesdeUFID);
+        //lo guardamos en PREFS
+        
+        NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+        [prefs setObject:passwordesdeUFID forKey:@"password"];
+        [prefs synchronize];
+        
+    }
     
     
     
@@ -53,7 +141,8 @@
             
             [self alertStatus:@"Introduce email y password" :@"Error!" :0];
             
-           self.autolgin.on=NO;
+           self.autolgin.on=NO;//esto e s el switch de autologing
+            
             
             
         } else {
@@ -62,7 +151,20 @@
             
             [self.autolgin setOn:YES animated:YES];
             
-            [self LoginSuces];
+            
+            //chequeamos el password solo
+            if (([[self.password text]isEqualToString:@"sevilla"]) || ([[self.password text]isEqualToString:PREF_PASSWORD])) {
+                
+                   [self LoginSuces];
+            }
+            
+            else {
+                
+                //algo esta mal
+                
+                 [self alertStatus:@"Introduce email y password correctos " :@"Error!" :0];
+            }
+         
             
             
                    }
@@ -110,6 +212,17 @@
                                     repeats:YES];
     
     //[self performSegueWithIdentifier:@"login_success" sender:self];
+    
+    //yponemos el BOLL delo login ya a TRUE:
+    
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+
+    //guaradamos
+    [prefs  setBool:true forKey:(@"loginyaok")];
+    
+    
+    [prefs synchronize];
+    
     
 }
 

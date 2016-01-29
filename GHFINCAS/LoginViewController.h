@@ -12,7 +12,26 @@
 
 
 
-@interface LoginViewController : UIViewController <UITextFieldDelegate>
+@interface LoginViewController : UIViewController <UITextFieldDelegate>{
+   
+    
+    //ivars para email,pass/telfno/nombrecomunidad/hnombrevecion/loginyaok
+    
+    NSString *PREF_EMAIL;
+     NSString *PREF_PASSWORD;
+     NSString *PREF_TELEFONO;
+     NSString *PREF_NOMBRECMUNIDAD;
+    NSString *PREF_NOMBREVECINO;
+     BOOL *PREF_BOOL_LOGINYAOK;
+    //ivar para el numero de arranques
+    int PREF_NUMERO_DEARRANQUES;
+    
+    
+}
+
+
+
+
  
 @property (weak, nonatomic) IBOutlet UITextField *login;
 @property (weak, nonatomic) IBOutlet UISwitch *autolgin;
