@@ -8,7 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SignupViewController : UIViewController
+@interface SignupViewController : UIViewController{
+    
+    NSString *PREF_EMAIL;
+  
+    NSString *PREF_TELEFONO;
+    NSString *PREF_NOMBRECMUNIDAD;
+    NSString *PREF_NOMBREVECINO;
+}
 
 @property (strong, nonatomic) IBOutlet UITextField *Nombre;
 @property (strong, nonatomic) IBOutlet UITextField *email;

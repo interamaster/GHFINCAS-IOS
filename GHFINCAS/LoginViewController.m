@@ -7,6 +7,9 @@
 //
 
 #import "LoginViewController.h"
+//para el alertView  mas bonita
+
+#import "ILAlertView.h"
 
 @interface LoginViewController ()
 
@@ -29,11 +32,19 @@
     
     
     PREF_PASSWORD=[prefs stringForKey:@"password"];
+    PREF_NOMBREVECINO=[prefs stringForKey:@"nombre_vecino"];
+    PREF_TELEFONO=[prefs stringForKey:@"telefono"];
+    PREF_NOMBRECMUNIDAD=[prefs stringForKey:@"nombre_comunidad"];
+    
     
     PREF_BOOL_LOGINYAOK=[prefs boolForKey:@"loginyaok"];
     
     NSLog(@"email: %@",PREF_EMAIL);
     NSLog(@"passw: %@",PREF_PASSWORD);
+    NSLog(@"vecino: %@",PREF_NOMBREVECINO);
+    NSLog(@"telefono: %@",PREF_TELEFONO);
+    NSLog(@"comunidad: %@",PREF_NOMBRECMUNIDAD);
+    
     NSLog(@"loginyaok: %i",(int)PREF_BOOL_LOGINYAOK);
     
     
@@ -60,7 +71,8 @@
     
     
     //si ya hemos arranacadio algnua vez nos ahorramos el sacar el UDID(aqui nohay imei...)
-    if (PREF_NUMERO_DEARRANQUES<40) {
+    //TODO poner en 1
+    if (PREF_NUMERO_DEARRANQUES<140) {
         [self EncontrarPassword];
         
     }
@@ -173,6 +185,9 @@
 
 - (void) alertStatus:(NSString *)msg :(NSString *)title :(int) tag
 {
+   
+    
+    /*
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
                                                         message:msg
                                                        delegate:self
@@ -180,6 +195,10 @@
                                               otherButtonTitles:nil, nil];
                                 alertView.tag = tag;
                             [alertView show];
+    */
+    
+    
+       [ILAlertView showWithTitle:title message:msg closeButtonTitle:@"OK" secondButtonTitle:nil tappedSecondButton:nil];
 }
 
 
