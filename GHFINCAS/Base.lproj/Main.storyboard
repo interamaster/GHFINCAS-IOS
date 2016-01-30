@@ -119,28 +119,28 @@
         <!--COMUNIDAD-->
         <scene sceneID="qhF-GR-75p">
             <objects>
-                <viewController id="N9Q-w8-Lex" sceneMemberID="viewController">
+                <viewController id="N9Q-w8-Lex" customClass="ComunidadViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yVk-NN-7NP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="comunidad" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="rkE-hD-ujO">
-                                <rect key="frame" x="31" y="184" width="177" height="42"/>
+                            <webView contentMode="scaleToFill" id="slk-ge-D2d">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="619"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="COMUNIDAD" image="flat_comunidad" id="a6D-7J-oje"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webview" destination="slk-ge-D2d" id="cU7-g4-Rfx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7B-dA-lDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="335" y="203"/>
+            <point key="canvasLocation" x="334.5" y="202.5"/>
         </scene>
         <!--PROVEEDOR-->
         <scene sceneID="wg7-f3-ORb">
@@ -197,28 +197,77 @@
         <!--INCIDENCIAS-->
         <scene sceneID="Xm6-U4-R6q">
             <objects>
-                <viewController id="5xm-qo-YvD" sceneMemberID="viewController">
+                <viewController id="5xm-qo-YvD" customClass="IncidenciaViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V6o-c3-oZ3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="incidencias" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="tN0-dh-a3u">
-                                <rect key="frame" x="102" y="316" width="179" height="42"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="GH FINCAS PROPORCIONA UN SERVICIO INTEGRAL  24 H/365 DIAS AL AÑO" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" minimumFontSize="10" id="tN0-dh-a3u">
+                                <rect key="frame" x="42" y="344" width="290" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jzd-dW-XNd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.16470588743686676" green="0.28627452254295349" blue="0.50196081399917603" alpha="1" colorSpace="deviceRGB"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="POR TELEFONO" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="nyV-z2-FsL">
+                                <rect key="frame" x="92" y="51" width="282" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="tsE-dI-rTJ">
+                                <rect key="frame" x="0.0" y="148" width="375" height="152"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.38431376218795776" green="0.59607845544815063" blue="0.80784320831298828" alpha="1" colorSpace="deviceRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="X1x-xX-gbZ">
+                                <rect key="frame" x="21" y="184" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="flat_mail.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="EmailPulsado:" destination="5xm-qo-YvD" eventType="touchUpInside" id="v0X-8f-acM"/>
+                                    <action selector="pulsado_telefono24h:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3CS-uf-Wd3"/>
+                                    <segue destination="GDS-NT-kNw" kind="modal" id="cyt-Sy-XEc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="POR EMAIL" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="mqy-Ms-6cM">
+                                <rect key="frame" x="154" y="193" width="211" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="33"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uNF-K5-Ycp">
+                                <rect key="frame" x="21" y="47" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="flat_24h.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="TelefonoPulsado:" destination="5xm-qo-YvD" eventType="touchUpInside" id="Pw4-GI-rPE"/>
+                                    <action selector="pulsado_telefono24h:" destination="9pv-A4-QxB" eventType="touchUpInside" id="dPF-qy-mpb"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.38431376218795776" green="0.37647062540054321" blue="0.44313728809356689" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="INCIDENCIAS" image="flat_incidencias" id="mn9-0w-cLI"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neD-vu-iPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1333" y="165"/>
+            <point key="canvasLocation" x="1437.5" y="-620.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Fa7-21-jDt">
@@ -448,6 +497,55 @@
             </objects>
             <point key="canvasLocation" x="-209" y="-409"/>
         </scene>
+        <!--INCIDENCIA MAIL-->
+        <scene sceneID="3TU-8p-wrc">
+            <objects>
+                <viewController id="GDS-NT-kNw" userLabel="INCIDENCIA MAIL" customClass="INCIDENCIAPOREMAILViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8xS-Jw-mgZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3hC-cU-6tN">
+                                <rect key="frame" x="18" y="15" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="VOLVER:" destination="GDS-NT-kNw" eventType="touchUpInside" id="FxE-LY-W2u"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Titulo Incidencia" minimumFontSize="17" id="ODr-9g-q6B">
+                                <rect key="frame" x="18" y="69" width="341" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Descripcion" id="gKf-Cu-Fch">
+                                <rect key="frame" x="23" y="148" width="336" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="INCIDENCIA POR EMAIL" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="IZP-Hc-iNY">
+                                <rect key="frame" x="97" y="456" width="225" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="21"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="COMUNICADOS" image="flat_comunicados" id="rLh-9x-KNB"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ES-qi-RPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1885.5" y="-620.5"/>
+        </scene>
     </scenes>
     <resources>
         <image name="flat_24h.png" width="128" height="128"/>
@@ -455,6 +553,7 @@
         <image name="flat_comunidad" width="25" height="25"/>
         <image name="flat_empresaok2" width="25" height="25"/>
         <image name="flat_incidencias" width="25" height="25"/>
+        <image name="flat_mail.png" width="128" height="128"/>
         <image name="flat_proveedores" width="25" height="25"/>
         <image name="fondo2.jpg" width="2500" height="1875"/>
         <image name="logo7.jpg" width="500" height="500"/>
@@ -466,6 +565,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RYk-ua-dES"/>
+        <segue reference="L6e-bv-SYK"/>
     </inferredMetricsTieBreakers>
 </document>
