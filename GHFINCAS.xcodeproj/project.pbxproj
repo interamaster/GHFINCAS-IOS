@@ -19,6 +19,11 @@
 		C80A0EC01C576EF8003E2013 /* logo7redondo.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EBA1C576EF8003E2013 /* logo7redondo.png */; };
 		C80A0EC11C576EF8003E2013 /* logo7redondo 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EBB1C576EF8003E2013 /* logo7redondo 2.png */; };
 		C80A0EC21C576EF8003E2013 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EBC1C576EF8003E2013 /* web.png */; };
+		C82895941C5D170D00A9754F /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C828958B1C5D170C00A9754F /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C82895951C5D170D00A9754F /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C828958D1C5D170C00A9754F /* HSK_CFUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C82895961C5D170D00A9754F /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C828958F1C5D170C00A9754F /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C82895971C5D170D00A9754F /* NSStream+SKPSMTPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C82895911C5D170D00A9754F /* NSStream+SKPSMTPExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C82895981C5D170D00A9754F /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C82895931C5D170D00A9754F /* SKPSMTPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C8862CC91C5623B000FB905E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8862CC81C5623B000FB905E /* main.m */; };
 		C8862CCC1C5623B000FB905E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8862CCB1C5623B000FB905E /* AppDelegate.m */; };
 		C8862CCF1C5623B000FB905E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8862CCE1C5623B000FB905E /* FirstViewController.m */; };
@@ -38,11 +43,6 @@
 		C8862D011C57693D00FB905E /* flat_proveedores1.png in Resources */ = {isa = PBXBuildFile; fileRef = C8862CF81C57693D00FB905E /* flat_proveedores1.png */; };
 		C88989431C5B7D2D0080052E /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88989421C5B7D2D0080052E /* SignupViewController.m */; };
 		C8DEEB521C5BE5E200C8E6CC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEEB511C5BE5E200C8E6CC /* CFNetwork.framework */; };
-		C8DEEB5E1C5BE64900C8E6CC /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DEEB551C5BE64900C8E6CC /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C8DEEB5F1C5BE64900C8E6CC /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DEEB571C5BE64900C8E6CC /* HSK_CFUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C8DEEB601C5BE64900C8E6CC /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DEEB591C5BE64900C8E6CC /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C8DEEB611C5BE64900C8E6CC /* NSStream+SKPSMTPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DEEB5B1C5BE64900C8E6CC /* NSStream+SKPSMTPExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C8DEEB621C5BE64900C8E6CC /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DEEB5D1C5BE64900C8E6CC /* SKPSMTPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C8DEEB641C5CDB3900C8E6CC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEEB631C5CDB3900C8E6CC /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +72,16 @@
 		C80A0EBA1C576EF8003E2013 /* logo7redondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo7redondo.png; sourceTree = "<group>"; };
 		C80A0EBB1C576EF8003E2013 /* logo7redondo 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo7redondo 2.png"; sourceTree = "<group>"; };
 		C80A0EBC1C576EF8003E2013 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web.png; sourceTree = "<group>"; };
+		C828958A1C5D170C00A9754F /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		C828958B1C5D170C00A9754F /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Transcoder.m; sourceTree = "<group>"; };
+		C828958C1C5D170C00A9754F /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSK_CFUtilities.h; sourceTree = "<group>"; };
+		C828958D1C5D170C00A9754F /* HSK_CFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSK_CFUtilities.m; sourceTree = "<group>"; };
+		C828958E1C5D170C00A9754F /* NSData+Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64Additions.h"; sourceTree = "<group>"; };
+		C828958F1C5D170C00A9754F /* NSData+Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64Additions.m"; sourceTree = "<group>"; };
+		C82895901C5D170D00A9754F /* NSStream+SKPSMTPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStream+SKPSMTPExtensions.h"; sourceTree = "<group>"; };
+		C82895911C5D170D00A9754F /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
+		C82895921C5D170D00A9754F /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKPSMTPMessage.h; sourceTree = "<group>"; };
+		C82895931C5D170D00A9754F /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKPSMTPMessage.m; sourceTree = "<group>"; };
 		C8862CC31C5623B000FB905E /* GHFINCAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFINCAS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8862CC71C5623B000FB905E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8862CC81C5623B000FB905E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,16 +109,6 @@
 		C88989411C5B7D2D0080052E /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		C88989421C5B7D2D0080052E /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
 		C8DEEB511C5BE5E200C8E6CC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		C8DEEB541C5BE64900C8E6CC /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base64Transcoder.h; path = "../../../skpsmtpmessage-master/SMTPLibrary/Base64Transcoder.h"; sourceTree = "<group>"; };
-		C8DEEB551C5BE64900C8E6CC /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Base64Transcoder.m; path = "../../../skpsmtpmessage-master/SMTPLibrary/Base64Transcoder.m"; sourceTree = "<group>"; };
-		C8DEEB561C5BE64900C8E6CC /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HSK_CFUtilities.h; path = "../../../skpsmtpmessage-master/SMTPLibrary/HSK_CFUtilities.h"; sourceTree = "<group>"; };
-		C8DEEB571C5BE64900C8E6CC /* HSK_CFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HSK_CFUtilities.m; path = "../../../skpsmtpmessage-master/SMTPLibrary/HSK_CFUtilities.m"; sourceTree = "<group>"; };
-		C8DEEB581C5BE64900C8E6CC /* NSData+Base64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64Additions.h"; path = "../../../skpsmtpmessage-master/SMTPLibrary/NSData+Base64Additions.h"; sourceTree = "<group>"; };
-		C8DEEB591C5BE64900C8E6CC /* NSData+Base64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64Additions.m"; path = "../../../skpsmtpmessage-master/SMTPLibrary/NSData+Base64Additions.m"; sourceTree = "<group>"; };
-		C8DEEB5A1C5BE64900C8E6CC /* NSStream+SKPSMTPExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSStream+SKPSMTPExtensions.h"; path = "../../../skpsmtpmessage-master/SMTPLibrary/NSStream+SKPSMTPExtensions.h"; sourceTree = "<group>"; };
-		C8DEEB5B1C5BE64900C8E6CC /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSStream+SKPSMTPExtensions.m"; path = "../../../skpsmtpmessage-master/SMTPLibrary/NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
-		C8DEEB5C1C5BE64900C8E6CC /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKPSMTPMessage.h; path = "../../../skpsmtpmessage-master/SMTPLibrary/SKPSMTPMessage.h"; sourceTree = "<group>"; };
-		C8DEEB5D1C5BE64900C8E6CC /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKPSMTPMessage.m; path = "../../../skpsmtpmessage-master/SMTPLibrary/SKPSMTPMessage.m"; sourceTree = "<group>"; };
 		C8DEEB631C5CDB3900C8E6CC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -273,16 +273,16 @@
 		C8DEEB531C5BE61E00C8E6CC /* SMTPLIBRARY */ = {
 			isa = PBXGroup;
 			children = (
-				C8DEEB541C5BE64900C8E6CC /* Base64Transcoder.h */,
-				C8DEEB551C5BE64900C8E6CC /* Base64Transcoder.m */,
-				C8DEEB561C5BE64900C8E6CC /* HSK_CFUtilities.h */,
-				C8DEEB571C5BE64900C8E6CC /* HSK_CFUtilities.m */,
-				C8DEEB581C5BE64900C8E6CC /* NSData+Base64Additions.h */,
-				C8DEEB591C5BE64900C8E6CC /* NSData+Base64Additions.m */,
-				C8DEEB5A1C5BE64900C8E6CC /* NSStream+SKPSMTPExtensions.h */,
-				C8DEEB5B1C5BE64900C8E6CC /* NSStream+SKPSMTPExtensions.m */,
-				C8DEEB5C1C5BE64900C8E6CC /* SKPSMTPMessage.h */,
-				C8DEEB5D1C5BE64900C8E6CC /* SKPSMTPMessage.m */,
+				C828958A1C5D170C00A9754F /* Base64Transcoder.h */,
+				C828958B1C5D170C00A9754F /* Base64Transcoder.m */,
+				C828958C1C5D170C00A9754F /* HSK_CFUtilities.h */,
+				C828958D1C5D170C00A9754F /* HSK_CFUtilities.m */,
+				C828958E1C5D170C00A9754F /* NSData+Base64Additions.h */,
+				C828958F1C5D170C00A9754F /* NSData+Base64Additions.m */,
+				C82895901C5D170D00A9754F /* NSStream+SKPSMTPExtensions.h */,
+				C82895911C5D170D00A9754F /* NSStream+SKPSMTPExtensions.m */,
+				C82895921C5D170D00A9754F /* SKPSMTPMessage.h */,
+				C82895931C5D170D00A9754F /* SKPSMTPMessage.m */,
 			);
 			name = SMTPLIBRARY;
 			sourceTree = "<group>";
@@ -405,17 +405,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8DEEB621C5BE64900C8E6CC /* SKPSMTPMessage.m in Sources */,
-				C8DEEB601C5BE64900C8E6CC /* NSData+Base64Additions.m in Sources */,
-				C8DEEB5F1C5BE64900C8E6CC /* HSK_CFUtilities.m in Sources */,
-				C8DEEB5E1C5BE64900C8E6CC /* Base64Transcoder.m in Sources */,
+				C82895981C5D170D00A9754F /* SKPSMTPMessage.m in Sources */,
+				C82895961C5D170D00A9754F /* NSData+Base64Additions.m in Sources */,
+				C82895951C5D170D00A9754F /* HSK_CFUtilities.m in Sources */,
+				C82895941C5D170D00A9754F /* Base64Transcoder.m in Sources */,
 				C8862CD21C5623B000FB905E /* SecondViewController.m in Sources */,
 				78BC73BF1C582261001E2AFB /* UCZProgressView.m in Sources */,
 				C8862CCC1C5623B000FB905E /* AppDelegate.m in Sources */,
 				788B65D91C57FB4700081ABB /* LoginViewController.m in Sources */,
 				C8862CCF1C5623B000FB905E /* FirstViewController.m in Sources */,
 				788B65D31C57EF5100081ABB /* ILAlertView.m in Sources */,
-				C8DEEB611C5BE64900C8E6CC /* NSStream+SKPSMTPExtensions.m in Sources */,
+				C82895971C5D170D00A9754F /* NSStream+SKPSMTPExtensions.m in Sources */,
 				C88989431C5B7D2D0080052E /* SignupViewController.m in Sources */,
 				C8862CC91C5623B000FB905E /* main.m in Sources */,
 			);
