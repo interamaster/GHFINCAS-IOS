@@ -43,6 +43,7 @@
 		C8DEEB601C5BE64900C8E6CC /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DEEB591C5BE64900C8E6CC /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C8DEEB611C5BE64900C8E6CC /* NSStream+SKPSMTPExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DEEB5B1C5BE64900C8E6CC /* NSStream+SKPSMTPExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C8DEEB621C5BE64900C8E6CC /* SKPSMTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DEEB5D1C5BE64900C8E6CC /* SKPSMTPMessage.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C8DEEB641C5CDB3900C8E6CC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEEB631C5CDB3900C8E6CC /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		C8DEEB5B1C5BE64900C8E6CC /* NSStream+SKPSMTPExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSStream+SKPSMTPExtensions.m"; path = "../../../skpsmtpmessage-master/SMTPLibrary/NSStream+SKPSMTPExtensions.m"; sourceTree = "<group>"; };
 		C8DEEB5C1C5BE64900C8E6CC /* SKPSMTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKPSMTPMessage.h; path = "../../../skpsmtpmessage-master/SMTPLibrary/SKPSMTPMessage.h"; sourceTree = "<group>"; };
 		C8DEEB5D1C5BE64900C8E6CC /* SKPSMTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKPSMTPMessage.m; path = "../../../skpsmtpmessage-master/SMTPLibrary/SKPSMTPMessage.m"; sourceTree = "<group>"; };
+		C8DEEB631C5CDB3900C8E6CC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8DEEB641C5CDB3900C8E6CC /* MessageUI.framework in Frameworks */,
 				C8DEEB521C5BE5E200C8E6CC /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +180,7 @@
 		C8862CBA1C5623B000FB905E = {
 			isa = PBXGroup;
 			children = (
+				C8DEEB631C5CDB3900C8E6CC /* MessageUI.framework */,
 				C8DEEB511C5BE5E200C8E6CC /* CFNetwork.framework */,
 				C8862CC51C5623B000FB905E /* GHFINCAS */,
 				C8862CE21C5623B000FB905E /* GHFINCASTests */,
@@ -536,6 +540,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GHFINCAS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -546,6 +551,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GHFINCAS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

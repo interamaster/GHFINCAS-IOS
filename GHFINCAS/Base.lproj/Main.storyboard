@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="xaQ-vm-rmT">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
@@ -402,6 +403,10 @@
                                     <action selector="btnsignup:" destination="W9u-UT-O6f" eventType="touchUpInside" id="Ogt-LC-G2X"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="Ns4-e3-Na9">
+                                <rect key="frame" x="167" y="291" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -411,6 +416,7 @@
                         <outlet property="Nombre" destination="4qF-hR-LCI" id="JIN-eD-bC2"/>
                         <outlet property="email" destination="asE-RJ-nae" id="TEJ-BZ-xd7"/>
                         <outlet property="nombrecomunidad" destination="Gn4-r6-XYD" id="NTq-Un-dc0"/>
+                        <outlet property="progresscircular" destination="Ns4-e3-Na9" id="g5M-oi-zx9"/>
                         <outlet property="telefono" destination="9J7-zl-TWf" id="Ocp-6m-X5m"/>
                     </connections>
                 </viewController>

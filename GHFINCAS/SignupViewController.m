@@ -14,6 +14,9 @@
 #import "SKPSMTPMessage.h"
 #import "NSData+Base64Additions.h" // for Base64 encoding
 
+#import <MessageUI/MessageUI.h> //para ekl envio email manual si fall el otro
+
+
 @interface SignupViewController (){
     
     BOOL SendEmailOK;//PARASABER SI SE MANDO OK  O NO EL AUTO EMAIL
@@ -31,10 +34,27 @@
     SendEmailOK=false;//PARASABER SI SE MANDO OK  O NO EL AUTO EMAIL de moemnto en false
     
     
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
     
-    //probamos a mandar e,mail del tiron....FUNCIONA!!!!
+    PREF_EMAIL=[prefs stringForKey:@"email"];
+    PREF_NOMBREVECINO=[prefs stringForKey:@"nombre_vecino"];
+    PREF_TELEFONO=[prefs stringForKey:@"telefono"];
+    PREF_NOMBRECMUNIDAD=[prefs stringForKey:@"nombre_comunidad"];
     
-    [self sendEmailInBackground];
+    if (PREF_EMAIL && PREF_NOMBRECMUNIDAD &&PREF_TELEFONO &&PREF_NOMBREVECINO) {
+        self.email.text=PREF_EMAIL;
+        self.telefono.text=PREF_TELEFONO;
+        self.Nombre.text=PREF_NOMBREVECINO;
+        self.nombrecomunidad.text=PREF_NOMBRECMUNIDAD;
+        
+    }
+    
+    
+    //para el inidcator
+    
+    //self.progresscircular = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    //self.progresscircular.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+    self.progresscircular.alpha=0.0;
     
     
 }
@@ -80,7 +100,36 @@
     [prefs setObject:PREF_TELEFONO forKey:@"telefono"];
     [prefs setObject:PREF_NOMBRECMUNIDAD forKey:@"nombre_comunidad"];
     [prefs synchronize];
+    
+    
+  
 
+    //RECUPERAMOS EL PASSWORD
+    PREF_PASSWORD=[prefs stringForKey:@"password"];
+    
+    
+  
+   
+    
+    
+    //para el progressbar mientras se nvia email auto:
+    
+    //self.progresscircular = [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    //self.progresscircular.frame = CGRectMake(0.0, 0.0, 40.0, 40.0);
+    //self.progresscircular.center = self.view.center;
+    //[self.view addSubview:self.progresscircular];
+    //[self.progresscircular bringSubviewToFront:self.view];
+    self.progresscircular.alpha=1.0;
+    [self.progresscircular startAnimating];
+    
+    
+   
+    
+    //probamos a mandar e,mail del tiron....FUNCIONA!!!!
+    
+    [self sendEmailInBackground];
+    
+    
     
 }
 
@@ -170,6 +219,10 @@
 
 
 -(void) sendEmailInBackground {
+    
+    
+    
+    
     NSLog(@"Start Sending");
     SKPSMTPMessage *emailMessage = [[SKPSMTPMessage alloc] init];
     emailMessage.fromEmail = @"jrdvsoftyopozi@gmail.com"; //sender email address
@@ -183,8 +236,11 @@
     emailMessage.subject =@"nueva alta ghfincas ios";
     emailMessage.wantsSecure = YES;
     emailMessage.delegate = self; // you must include <SKPSMTPMessageDelegate> to your class
-    NSString *messageBody = @"your email body message";
+   // NSString *messageBody = @"your email body message";
     //for example :   NSString *messageBody = [NSString stringWithFormat:@"Tour Name: %@\nName: %@\nEmail: %@\nContact No: %@\nAddress: %@\nNote: %@",selectedTour,nameField.text,emailField.text,foneField.text,addField.text,txtView.text];
+    
+    NSString *messageBody = [NSString stringWithFormat:@"Gracias por enviarnos su email estos son sus datos:\n NOMBRE: %@\n TELEFONO: %@ \n Email: %@ \nCOMUNIDAD %@\n ADFSDLIFSDLJKHDLKASHDLKHSLKJDHLSDHLKASDKJSKDJJDKJKLDLSKAJDLKAJSDKJLDJLKSJDLKAJSDLKSJADLKJASLDJASKDKJDLKJERIUF KLJHFDKHGJKFHKJHGKJHJKFJKDFHGKJHDFKJGHKJDFHGKJFHJKHJFGKJHFDKJGHKJFDHGJKFHGKJDKHGDFKHGJKFDHGKSHFJGHDFSKGKJFDHGKFHDSADASKDJKASJDLKAJDLKJSALKDJLKJKDLJSALKDJASLKDJLKASDJLKSDJKLSJDLKASJDLKJSLKJDLKJDDSJLKADJSLDSJAKSDKLDSLJ DNSDJLKAJJKVJKVSDIOUFISODUOIFSJKLKDLSFJLKSDJFLKDSJFKLJSDLKFJKLDSJFLKSJDFLKJSDLKFJKLDJFLKSDJFKLJSDFKLJSDKLFJSDKLF\n \n \n el password deberia ser ghfincas+2 utimos digitos del imei osea: %@",PREF_NOMBREVECINO,PREF_TELEFONO,PREF_EMAIL,PREF_NOMBRECMUNIDAD,PREF_PASSWORD];
+    
     // Now creating plain text email message
     NSDictionary *plainMsg = [NSDictionary
                               dictionaryWithObjectsAndKeys:@"text/plain",kSKPSMTPPartContentTypeKey,
@@ -206,19 +262,119 @@
 // On success
 
 -(void)messageSent:(SKPSMTPMessage *)message{
+    
+    SendEmailOK=true;
+     [self.progresscircular stopAnimating];
+    self.progresscircular.alpha=0.0;
+    
     NSLog(@"delegate - message sent");
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message sent." message:nil delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+   
+    /*UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Su informacion se envio correctamente!!" message:@"En menos de 24h recibirá por el email facilitado su contraseña" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
     [alert show];
+    
+    */
+    
+    //conIALert
+    
+    
+    [self alertStatus:@"En menos de 24h recibirá por el email facilitado su contraseña" :@"Su informacion se envio correctamente!!" :0];
 }
 // On Failure
 -(void)messageFailed:(SKPSMTPMessage *)message error:(NSError *)error{
+    
+     SendEmailOK=false;
+    
+    //enviar manual:
+    
+    /*
     // open an alert with just an OK button
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error!" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
     [alert show];
     NSLog(@"delegate - error(%ld): %@", (long)[error code], [error localizedDescription]);
+    */
+    
+    
+    //probamos el manual:
+    [self ManualEmailSiFallaAutomatico];
+    
 }
 
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////PARA EMAIL MANUAL///////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+- (void)ManualEmailSiFallaAutomatico{
+    
+    
+    if ([MFMailComposeViewController canSendMail]) {
+     
+    
+    // Email Subject
+    NSString *emailTitle = @"nueva alta ghfincas ios";
+    // Email Content
+    NSString *messageBody = @"iOS programming is so fun!";
+    // NSString *messageBody = [NSString stringWithFormat:@"Gracias por enviarnos su email estos son sus datos:\n NOMBRE: %@\n TELEFONO: %@ \n Email: %@ \nCOMUNIDAD %@\n ADFSDLIFSDLJKHDLKASHDLKHSLKJDHLSDHLKASDKJSKDJJDKJKLDLSKAJDLKAJSDKJLDJLKSJDLKAJSDLKSJADLKJASLDJASKDKJDLKJERIUF KLJHFDKHGJKFHKJHGKJHJKFJKDFHGKJHDFKJGHKJDFHGKJFHJKHJFGKJHFDKJGHKJFDHGJKFHGKJDKHGDFKHGJKFDHGKSHFJGHDFSKGKJFDHGKFHDSADASKDJKASJDLKAJDLKJSALKDJLKJKDLJSALKDJASLKDJLKASDJLKSDJ%@LSJDLKASJDLKJSLKJDLKJDDSJLKADJSLDSJAKSDKLDSLJ DNSDJLKAJJKVJKVSDIOUFISODUOIFSJKLKDLSFJLKSDJFLKDSJFKLJSDLKFJKLDSJFLKSJDFLKJSDLKFJKLDJFLKSDJFKLJSDFKLJSDKLFJSDKLF\n \n \n  ",PREF_NOMBREVECINO,PREF_TELEFONO,PREF_EMAIL,PREF_NOMBRECMUNIDAD,PREF_PASSWORD];
+    
+    
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:@"interamaster@gmail.com"];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    if (mc !=nil) {
+     
+   
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:nil];
+    }
+    }
+    
+    else {
+         [self alertStatus:@"Fallo de envio compruebe su conexion a internet!!" :@"Error!" :0];
+        
+    }
+    
+}
+
+//delegate del mail composer
+
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+              //[self alertStatus:@"HA cancelado el envio, asi no podremos enviarle su password, vuelva a intentarlo" :@"Error!" :0];
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+             // [self alertStatus:@"HA guaradao su email, pero aun no se ha enviado,dele a enviar o no podremos facilitarle su password" :@"Error!" :0];
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+             // [self alertStatus:@"En menos de 24h recibirá por el email facilitado su contraseña" :@"Su informacion se envio correctamente!!" :0];
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+           //   [self alertStatus:@"Fallo de envio compruebe su conexion a internet!!" :@"Error!" :0];
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
 
 
 @end
