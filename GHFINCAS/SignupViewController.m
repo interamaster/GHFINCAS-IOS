@@ -277,7 +277,31 @@
     //conIALert
     
     
-    [self alertStatus:@"En menos de 24h recibirá por el email facilitado su contraseña" :@"Su informacion se envio correctamente!!" :0];
+    //[self alertStatus:@"En menos de 24h recibirá por el email facilitado su contraseña" :@"Su informacion se envio correctamente!!" :0];
+    //pongo con dispatch para que se cierre este VC!!!
+    
+    /*
+     
+     [ILAlertView showWithTitle:@"Aviso"
+     message:@"Lo siento esta aplicacion es LPY COPAS!!!! bajate LPY pulsando OK"
+     closeButtonTitle:@"CANCEL"
+     secondButtonTitle:@"OK to APPStore"
+     tappedSecondButton:^{ //abrimos itunes
+     
+     
+     NSString *iTunesLink = @"https://itunes.apple.com/es/app/lopidoyo/id671685332?mt=8";
+     
+     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];}];
+     */
+    
+    //IALERT para poder cerrar VC
+    
+    
+    [ILAlertView showWithTitle:@"Su informacion se envio correctamente!!" message:@"En menos de 24h recibirá por el email facilitado su contraseña" closeButtonTitle:nil secondButtonTitle:@"OK" tappedSecondButton:^{
+        //cerramos VC
+          [self dismissViewControllerAnimated:YES completion:nil];
+        }];
+    
 }
 // On Failure
 -(void)messageFailed:(SKPSMTPMessage *)message error:(NSError *)error{
@@ -363,6 +387,9 @@
         case MFMailComposeResultSent:
             NSLog(@"Mail sent");
              // [self alertStatus:@"En menos de 24h recibirá por el email facilitado su contraseña" :@"Su informacion se envio correctamente!!" :0];
+            
+         
+            
             break;
         case MFMailComposeResultFailed:
             NSLog(@"Mail sent failure: %@", [error localizedDescription]);
