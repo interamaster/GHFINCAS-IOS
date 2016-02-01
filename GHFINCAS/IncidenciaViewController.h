@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-//para el alertView que marque el telfono
+ 
 
-#import "ILAlertView.h"
 @interface IncidenciaViewController : UIViewController
 - (IBAction)TelefonoPulsado:(id)sender;
 - (IBAction)EmailPulsado:(id)sender;

@@ -19,6 +19,14 @@
 		C80A0EC01C576EF8003E2013 /* logo7redondo.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EBA1C576EF8003E2013 /* logo7redondo.png */; };
 		C80A0EC11C576EF8003E2013 /* logo7redondo 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EBB1C576EF8003E2013 /* logo7redondo 2.png */; };
 		C80A0EC21C576EF8003E2013 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EBC1C576EF8003E2013 /* web.png */; };
+		C824AFDE1C5F9DE60099479F /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFDD1C5F9DE60099479F /* UITextView+Placeholder.m */; };
+		C824AFE41C5FC1320099479F /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFE11C5FC1320099479F /* KVNProgress.m */; };
+		C824AFE51C5FC1320099479F /* KVNProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFE31C5FC1320099479F /* KVNProgressConfiguration.m */; };
+		C824AFEC1C5FC14B0099479F /* UIColor+KVNContrast.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFE71C5FC14B0099479F /* UIColor+KVNContrast.m */; };
+		C824AFED1C5FC14B0099479F /* UIImage+KVNEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFE91C5FC14B0099479F /* UIImage+KVNEmpty.m */; };
+		C824AFEE1C5FC14B0099479F /* UIImage+KVNImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFEB1C5FC14B0099479F /* UIImage+KVNImageEffects.m */; };
+		C824AFF41C5FC9D60099479F /* KVNProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C824AFF31C5FC9D60099479F /* KVNProgressView.xib */; };
+		C824AFF51C5FCF560099479F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C824AFEF1C5FC77C0099479F /* QuartzCore.framework */; };
 		C82895941C5D170D00A9754F /* Base64Transcoder.m in Sources */ = {isa = PBXBuildFile; fileRef = C828958B1C5D170C00A9754F /* Base64Transcoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C82895951C5D170D00A9754F /* HSK_CFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C828958D1C5D170C00A9754F /* HSK_CFUtilities.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C82895961C5D170D00A9754F /* NSData+Base64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C828958F1C5D170C00A9754F /* NSData+Base64Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -75,6 +83,21 @@
 		C80A0EBA1C576EF8003E2013 /* logo7redondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo7redondo.png; sourceTree = "<group>"; };
 		C80A0EBB1C576EF8003E2013 /* logo7redondo 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo7redondo 2.png"; sourceTree = "<group>"; };
 		C80A0EBC1C576EF8003E2013 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web.png; sourceTree = "<group>"; };
+		C824AFDC1C5F9DE60099479F /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		C824AFDD1C5F9DE60099479F /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		C824AFE01C5FC1320099479F /* KVNProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgress.h; sourceTree = "<group>"; };
+		C824AFE11C5FC1320099479F /* KVNProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNProgress.m; sourceTree = "<group>"; };
+		C824AFE21C5FC1320099479F /* KVNProgressConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgressConfiguration.h; sourceTree = "<group>"; };
+		C824AFE31C5FC1320099479F /* KVNProgressConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KVNProgressConfiguration.m; sourceTree = "<group>"; };
+		C824AFE61C5FC14B0099479F /* UIColor+KVNContrast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KVNContrast.h"; sourceTree = "<group>"; };
+		C824AFE71C5FC14B0099479F /* UIColor+KVNContrast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KVNContrast.m"; sourceTree = "<group>"; };
+		C824AFE81C5FC14B0099479F /* UIImage+KVNEmpty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNEmpty.h"; sourceTree = "<group>"; };
+		C824AFE91C5FC14B0099479F /* UIImage+KVNEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNEmpty.m"; sourceTree = "<group>"; };
+		C824AFEA1C5FC14B0099479F /* UIImage+KVNImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+KVNImageEffects.h"; sourceTree = "<group>"; };
+		C824AFEB1C5FC14B0099479F /* UIImage+KVNImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+KVNImageEffects.m"; sourceTree = "<group>"; };
+		C824AFEF1C5FC77C0099479F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C824AFF11C5FC7880099479F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		C824AFF31C5FC9D60099479F /* KVNProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KVNProgressView.xib; sourceTree = "<group>"; };
 		C828958A1C5D170C00A9754F /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
 		C828958B1C5D170C00A9754F /* Base64Transcoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64Transcoder.m; sourceTree = "<group>"; };
 		C828958C1C5D170C00A9754F /* HSK_CFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSK_CFUtilities.h; sourceTree = "<group>"; };
@@ -126,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C824AFF51C5FCF560099479F /* QuartzCore.framework in Frameworks */,
 				C8DEEB641C5CDB3900C8E6CC /* MessageUI.framework in Frameworks */,
 				C8DEEB521C5BE5E200C8E6CC /* CFNetwork.framework in Frameworks */,
 			);
@@ -144,6 +168,8 @@
 		788B65CA1C57EE8300081ABB /* SPECIAL VIEWS */ = {
 			isa = PBXGroup;
 			children = (
+				C824AFDF1C5FC0F40099479F /* KVNProgress */,
+				C824AFDB1C5F9D970099479F /* TextView+PlaceHolder */,
 				78BC73BC1C582243001E2AFB /* PreogressView */,
 				788B65CB1C57EE9500081ABB /* ALERTVIEW */,
 			);
@@ -186,9 +212,38 @@
 			name = PreogressView;
 			sourceTree = "<group>";
 		};
+		C824AFDB1C5F9D970099479F /* TextView+PlaceHolder */ = {
+			isa = PBXGroup;
+			children = (
+				C824AFDC1C5F9DE60099479F /* UITextView+Placeholder.h */,
+				C824AFDD1C5F9DE60099479F /* UITextView+Placeholder.m */,
+			);
+			name = "TextView+PlaceHolder";
+			sourceTree = "<group>";
+		};
+		C824AFDF1C5FC0F40099479F /* KVNProgress */ = {
+			isa = PBXGroup;
+			children = (
+				C824AFF31C5FC9D60099479F /* KVNProgressView.xib */,
+				C824AFE61C5FC14B0099479F /* UIColor+KVNContrast.h */,
+				C824AFE71C5FC14B0099479F /* UIColor+KVNContrast.m */,
+				C824AFE81C5FC14B0099479F /* UIImage+KVNEmpty.h */,
+				C824AFE91C5FC14B0099479F /* UIImage+KVNEmpty.m */,
+				C824AFEA1C5FC14B0099479F /* UIImage+KVNImageEffects.h */,
+				C824AFEB1C5FC14B0099479F /* UIImage+KVNImageEffects.m */,
+				C824AFE01C5FC1320099479F /* KVNProgress.h */,
+				C824AFE11C5FC1320099479F /* KVNProgress.m */,
+				C824AFE21C5FC1320099479F /* KVNProgressConfiguration.h */,
+				C824AFE31C5FC1320099479F /* KVNProgressConfiguration.m */,
+			);
+			name = KVNProgress;
+			sourceTree = "<group>";
+		};
 		C8862CBA1C5623B000FB905E = {
 			isa = PBXGroup;
 			children = (
+				C824AFF11C5FC7880099479F /* GLKit.framework */,
+				C824AFEF1C5FC77C0099479F /* QuartzCore.framework */,
 				C8DEEB631C5CDB3900C8E6CC /* MessageUI.framework */,
 				C8DEEB511C5BE5E200C8E6CC /* CFNetwork.framework */,
 				C8862CC51C5623B000FB905E /* GHFINCAS */,
@@ -385,6 +440,7 @@
 				C80A0EC11C576EF8003E2013 /* logo7redondo 2.png in Resources */,
 				C8862CF91C57693D00FB905E /* FLAT INCIDENCIAS 2.png in Resources */,
 				788B65CF1C57EF2900081ABB /* alertBkg.png in Resources */,
+				C824AFF41C5FC9D60099479F /* KVNProgressView.xib in Resources */,
 				C80A0EBF1C576EF8003E2013 /* logo7.jpg in Resources */,
 				C8862D011C57693D00FB905E /* flat_proveedores1.png in Resources */,
 				C8862D001C57693D00FB905E /* flat_mail.png in Resources */,
@@ -425,14 +481,20 @@
 				C82895961C5D170D00A9754F /* NSData+Base64Additions.m in Sources */,
 				C828959E1C5D1F3F00A9754F /* IncidenciaViewController.m in Sources */,
 				C82895951C5D170D00A9754F /* HSK_CFUtilities.m in Sources */,
+				C824AFEC1C5FC14B0099479F /* UIColor+KVNContrast.m in Sources */,
+				C824AFDE1C5F9DE60099479F /* UITextView+Placeholder.m in Sources */,
 				C82895941C5D170D00A9754F /* Base64Transcoder.m in Sources */,
 				C8862CD21C5623B000FB905E /* SecondViewController.m in Sources */,
 				78BC73BF1C582261001E2AFB /* UCZProgressView.m in Sources */,
 				C8862CCC1C5623B000FB905E /* AppDelegate.m in Sources */,
 				788B65D91C57FB4700081ABB /* LoginViewController.m in Sources */,
+				C824AFEE1C5FC14B0099479F /* UIImage+KVNImageEffects.m in Sources */,
+				C824AFE51C5FC1320099479F /* KVNProgressConfiguration.m in Sources */,
 				C8862CCF1C5623B000FB905E /* FirstViewController.m in Sources */,
 				788B65D31C57EF5100081ABB /* ILAlertView.m in Sources */,
+				C824AFED1C5FC14B0099479F /* UIImage+KVNEmpty.m in Sources */,
 				C82895A11C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m in Sources */,
+				C824AFE41C5FC1320099479F /* KVNProgress.m in Sources */,
 				C82895971C5D170D00A9754F /* NSStream+SKPSMTPExtensions.m in Sources */,
 				C88989431C5B7D2D0080052E /* SignupViewController.m in Sources */,
 				C8862CC91C5623B000FB905E /* main.m in Sources */,
