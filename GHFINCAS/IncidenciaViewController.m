@@ -41,8 +41,16 @@
 - (IBAction)TelefonoPulsado:(id)sender {
     
     
+    
+    
+    
     NSString *phNo = @"673787175";
     NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@",phNo]];
+    
+    
+
+    
+    
     
     if([[UIApplication sharedApplication] canOpenURL:phoneUrl]){
         

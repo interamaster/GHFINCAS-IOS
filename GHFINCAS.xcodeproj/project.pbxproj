@@ -53,6 +53,8 @@
 		C8862D001C57693D00FB905E /* flat_mail.png in Resources */ = {isa = PBXBuildFile; fileRef = C8862CF71C57693D00FB905E /* flat_mail.png */; };
 		C8862D011C57693D00FB905E /* flat_proveedores1.png in Resources */ = {isa = PBXBuildFile; fileRef = C8862CF81C57693D00FB905E /* flat_proveedores1.png */; };
 		C88989431C5B7D2D0080052E /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88989421C5B7D2D0080052E /* SignupViewController.m */; };
+		C8D6D5EA1C5FD8AB002DF570 /* CLScrollview.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6D5E71C5FD8AB002DF570 /* CLScrollview.m */; };
+		C8D6D5EB1C5FD8AB002DF570 /* CLTickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6D5E91C5FD8AB002DF570 /* CLTickerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C8DEEB521C5BE5E200C8E6CC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEEB511C5BE5E200C8E6CC /* CFNetwork.framework */; };
 		C8DEEB641C5CDB3900C8E6CC /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEEB631C5CDB3900C8E6CC /* MessageUI.framework */; };
 /* End PBXBuildFile section */
@@ -140,6 +142,10 @@
 		C8862CF81C57693D00FB905E /* flat_proveedores1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flat_proveedores1.png; sourceTree = "<group>"; };
 		C88989411C5B7D2D0080052E /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		C88989421C5B7D2D0080052E /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		C8D6D5E61C5FD8AB002DF570 /* CLScrollview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLScrollview.h; sourceTree = "<group>"; };
+		C8D6D5E71C5FD8AB002DF570 /* CLScrollview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLScrollview.m; sourceTree = "<group>"; };
+		C8D6D5E81C5FD8AB002DF570 /* CLTickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTickerView.h; sourceTree = "<group>"; };
+		C8D6D5E91C5FD8AB002DF570 /* CLTickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTickerView.m; sourceTree = "<group>"; };
 		C8DEEB511C5BE5E200C8E6CC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		C8DEEB631C5CDB3900C8E6CC /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -168,6 +174,7 @@
 		788B65CA1C57EE8300081ABB /* SPECIAL VIEWS */ = {
 			isa = PBXGroup;
 			children = (
+				C8D6D5E51C5FD890002DF570 /* CLTICKERVIEW */,
 				C824AFDF1C5FC0F40099479F /* KVNProgress */,
 				C824AFDB1C5F9D970099479F /* TextView+PlaceHolder */,
 				78BC73BC1C582243001E2AFB /* PreogressView */,
@@ -340,6 +347,17 @@
 			name = iconos;
 			sourceTree = "<group>";
 		};
+		C8D6D5E51C5FD890002DF570 /* CLTICKERVIEW */ = {
+			isa = PBXGroup;
+			children = (
+				C8D6D5E61C5FD8AB002DF570 /* CLScrollview.h */,
+				C8D6D5E71C5FD8AB002DF570 /* CLScrollview.m */,
+				C8D6D5E81C5FD8AB002DF570 /* CLTickerView.h */,
+				C8D6D5E91C5FD8AB002DF570 /* CLTickerView.m */,
+			);
+			name = CLTICKERVIEW;
+			sourceTree = "<group>";
+		};
 		C8DEEB531C5BE61E00C8E6CC /* SMTPLIBRARY */ = {
 			isa = PBXGroup;
 			children = (
@@ -477,6 +495,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C82895981C5D170D00A9754F /* SKPSMTPMessage.m in Sources */,
+				C8D6D5EA1C5FD8AB002DF570 /* CLScrollview.m in Sources */,
 				C828959B1C5D1C4300A9754F /* ComunidadViewController.m in Sources */,
 				C82895961C5D170D00A9754F /* NSData+Base64Additions.m in Sources */,
 				C828959E1C5D1F3F00A9754F /* IncidenciaViewController.m in Sources */,
@@ -496,6 +515,7 @@
 				C82895A11C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m in Sources */,
 				C824AFE41C5FC1320099479F /* KVNProgress.m in Sources */,
 				C82895971C5D170D00A9754F /* NSStream+SKPSMTPExtensions.m in Sources */,
+				C8D6D5EB1C5FD8AB002DF570 /* CLTickerView.m in Sources */,
 				C88989431C5B7D2D0080052E /* SignupViewController.m in Sources */,
 				C8862CC91C5623B000FB905E /* main.m in Sources */,
 			);

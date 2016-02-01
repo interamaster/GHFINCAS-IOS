@@ -11,10 +11,15 @@
 
 #import <UIKit/UIKit.h>
 
+//para el CLTicker
+
+#import "CLTickerView.h"
+
 @interface FirstViewController : UIViewController
  
 - (IBAction)logo_pulsado:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIView *TextoMovible;
 
 @end
 

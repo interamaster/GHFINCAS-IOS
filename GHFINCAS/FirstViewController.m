@@ -52,6 +52,15 @@
     //ole yo 2
     
     
+    
+    CLTickerView *ticker = [[CLTickerView alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
+    
+    
+    ticker.marqueeStr =  @"esto es una pruabd e etco que se ira mobviendo dasd asd as d asd sd  sd sd  sd  sd sd d sd sd sd sa dsa dsa das das";
+    
+    ticker.marqueeFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0];
+    [self.TextoMovible addSubview:ticker];
+    
 }
 
 - (void)didReceiveMemoryWarning {

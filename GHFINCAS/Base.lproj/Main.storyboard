@@ -19,7 +19,7 @@
                                 <gestureRecognizers/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Uz0-49-F4r">
-                                <rect key="frame" x="0.0" y="477" width="196" height="142"/>
+                                <rect key="frame" x="0.0" y="478" width="196" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.21176472306251526" blue="0.44313728809356689" alpha="1" colorSpace="deviceRGB"/>
                             </imageView>
@@ -31,14 +31,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TELEFONOS DE CONTACTO" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n7X-e0-nzI">
-                                <rect key="frame" x="66" y="484" width="115" height="55"/>
+                                <rect key="frame" x="66" y="485" width="115" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FIJO:955-51-47-69" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yrU-S6-5fu">
-                                <rect key="frame" x="66" y="543" width="115" height="21"/>
+                                <rect key="frame" x="66" y="544" width="115" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -55,19 +55,19 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Zlf-kU-fud">
-                                <rect key="frame" x="189" y="477" width="186" height="142"/>
+                                <rect key="frame" x="189" y="478" width="186" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.015686275437474251" green="0.53333336114883423" blue="0.7882353663444519" alpha="1" colorSpace="deviceRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunes-Jueves: 9:30 -13:30 y            17:30-20:00" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y2m-G2-sRk">
-                                <rect key="frame" x="260" y="530" width="105" height="47"/>
+                                <rect key="frame" x="260" y="531" width="105" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HORARIOS DE OFICINA" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kyv-11-EFr">
-                                <rect key="frame" x="260" y="484" width="113" height="55"/>
+                                <rect key="frame" x="260" y="485" width="113" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -94,6 +94,11 @@
                                     <action selector="pulsado_info:" destination="9pv-A4-QxB" eventType="touchUpInside" id="0Tl-2i-hfW"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="TxU-rr-2kg">
+                                <rect key="frame" x="0.0" y="446" width="375" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -104,6 +109,7 @@
                     <tabBarItem key="tabBarItem" title="EMPRESA" image="flat_empresaok2" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="TextoMovible" destination="TxU-rr-2kg" id="Mpy-Lo-gJ5"/>
                         <outlet property="telefono24h" destination="aur-6h-3VU" id="CRw-lX-4Ra"/>
                     </connections>
                 </viewController>
@@ -237,7 +243,7 @@
                                 <connections>
                                     <action selector="EmailPulsado:" destination="5xm-qo-YvD" eventType="touchUpInside" id="v0X-8f-acM"/>
                                     <action selector="pulsado_telefono24h:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3CS-uf-Wd3"/>
-                                    <segue destination="GDS-NT-kNw" kind="modal" id="cyt-Sy-XEc"/>
+                                    <segue destination="GDS-NT-kNw" kind="modal" id="Yw5-Im-SJX"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="POR EMAIL" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="mqy-Ms-6cM">
@@ -548,6 +554,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="COMUNICADOS" image="flat_comunicados" id="rLh-9x-KNB"/>
+                    <navigationItem key="navigationItem" id="pon-sD-Lbe"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="descripociontextview" destination="gKf-Cu-Fch" id="5ix-7J-PR7"/>
