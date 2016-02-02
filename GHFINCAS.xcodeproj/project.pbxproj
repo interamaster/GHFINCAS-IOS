@@ -13,6 +13,13 @@
 		788B65D61C57F82F00081ABB /* fondo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 788B65D51C57F82F00081ABB /* fondo2.jpg */; };
 		788B65D91C57FB4700081ABB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 788B65D81C57FB4700081ABB /* LoginViewController.m */; };
 		7894432A1C61201E00386976 /* ProveedoresTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789443291C61201E00386976 /* ProveedoresTableViewController.m */; };
+		7894432D1C61233000386976 /* ProveedoresCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7894432C1C61233000386976 /* ProveedoresCellTableViewCell.m */; };
+		789443311C612BE400386976 /* ProveedorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 789443301C612BE400386976 /* ProveedorModel.m */; };
+		789443391C612D1900386976 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 789443341C612D1900386976 /* TFHpple.m */; };
+		7894433A1C612D1900386976 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 789443361C612D1900386976 /* TFHppleElement.m */; };
+		7894433B1C612D1900386976 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 789443381C612D1900386976 /* XPathQuery.m */; };
+		7894433D1C612DAF00386976 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7894433C1C612DAF00386976 /* libxml2.dylib */; };
+		789443411C616A0E00386976 /* NSString_stripHtml.m in Sources */ = {isa = PBXBuildFile; fileRef = 789443401C616A0E00386976 /* NSString_stripHtml.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		78BC73BF1C582261001E2AFB /* UCZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC73BE1C582261001E2AFB /* UCZProgressView.m */; };
 		C80A0EBD1C576EF8003E2013 /* fondoghfincasactivity1.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EB71C576EF8003E2013 /* fondoghfincasactivity1.png */; };
 		C80A0EBE1C576EF8003E2013 /* jrdvsoftlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EB81C576EF8003E2013 /* jrdvsoftlogo.png */; };
@@ -79,6 +86,19 @@
 		788B65D81C57FB4700081ABB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		789443281C61201E00386976 /* ProveedoresTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProveedoresTableViewController.h; sourceTree = "<group>"; };
 		789443291C61201E00386976 /* ProveedoresTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProveedoresTableViewController.m; sourceTree = "<group>"; };
+		7894432B1C61233000386976 /* ProveedoresCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProveedoresCellTableViewCell.h; sourceTree = "<group>"; };
+		7894432C1C61233000386976 /* ProveedoresCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProveedoresCellTableViewCell.m; sourceTree = "<group>"; };
+		7894432F1C612BE400386976 /* ProveedorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProveedorModel.h; sourceTree = "<group>"; };
+		789443301C612BE400386976 /* ProveedorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProveedorModel.m; sourceTree = "<group>"; };
+		789443331C612D1900386976 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		789443341C612D1900386976 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		789443351C612D1900386976 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		789443361C612D1900386976 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		789443371C612D1900386976 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		789443381C612D1900386976 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		7894433C1C612DAF00386976 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		7894433F1C616A0E00386976 /* NSString_stripHtml.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSString_stripHtml.h; sourceTree = "<group>"; };
+		789443401C616A0E00386976 /* NSString_stripHtml.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_stripHtml.m; sourceTree = "<group>"; };
 		78BC73BD1C582261001E2AFB /* UCZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCZProgressView.h; sourceTree = "<group>"; };
 		78BC73BE1C582261001E2AFB /* UCZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCZProgressView.m; sourceTree = "<group>"; };
 		C80A0EB71C576EF8003E2013 /* fondoghfincasactivity1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondoghfincasactivity1.png; sourceTree = "<group>"; };
@@ -155,6 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7894433D1C612DAF00386976 /* libxml2.dylib in Frameworks */,
 				C824AFF51C5FCF560099479F /* QuartzCore.framework in Frameworks */,
 				C8DEEB641C5CDB3900C8E6CC /* MessageUI.framework in Frameworks */,
 				C8DEEB521C5BE5E200C8E6CC /* CFNetwork.framework in Frameworks */,
@@ -210,6 +231,37 @@
 			name = FONDO;
 			sourceTree = "<group>";
 		};
+		7894432E1C612BB500386976 /* WEBMODEL */ = {
+			isa = PBXGroup;
+			children = (
+				7894432F1C612BE400386976 /* ProveedorModel.h */,
+				789443301C612BE400386976 /* ProveedorModel.m */,
+			);
+			name = WEBMODEL;
+			sourceTree = "<group>";
+		};
+		789443321C612D0200386976 /* HPPLE */ = {
+			isa = PBXGroup;
+			children = (
+				789443331C612D1900386976 /* TFHpple.h */,
+				789443341C612D1900386976 /* TFHpple.m */,
+				789443351C612D1900386976 /* TFHppleElement.h */,
+				789443361C612D1900386976 /* TFHppleElement.m */,
+				789443371C612D1900386976 /* XPathQuery.h */,
+				789443381C612D1900386976 /* XPathQuery.m */,
+			);
+			name = HPPLE;
+			sourceTree = "<group>";
+		};
+		7894433E1C6169F300386976 /* HTML SHITS */ = {
+			isa = PBXGroup;
+			children = (
+				7894433F1C616A0E00386976 /* NSString_stripHtml.h */,
+				789443401C616A0E00386976 /* NSString_stripHtml.m */,
+			);
+			name = "HTML SHITS";
+			sourceTree = "<group>";
+		};
 		78BC73BC1C582243001E2AFB /* PreogressView */ = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +301,7 @@
 		C8862CBA1C5623B000FB905E = {
 			isa = PBXGroup;
 			children = (
+				7894433C1C612DAF00386976 /* libxml2.dylib */,
 				C824AFF11C5FC7880099479F /* GLKit.framework */,
 				C824AFEF1C5FC77C0099479F /* QuartzCore.framework */,
 				C8DEEB631C5CDB3900C8E6CC /* MessageUI.framework */,
@@ -271,6 +324,9 @@
 		C8862CC51C5623B000FB905E /* GHFINCAS */ = {
 			isa = PBXGroup;
 			children = (
+				7894433E1C6169F300386976 /* HTML SHITS */,
+				789443321C612D0200386976 /* HPPLE */,
+				7894432E1C612BB500386976 /* WEBMODEL */,
 				C8DEEB531C5BE61E00C8E6CC /* SMTPLIBRARY */,
 				788B65CA1C57EE8300081ABB /* SPECIAL VIEWS */,
 				C8862CCA1C5623B000FB905E /* AppDelegate.h */,
@@ -289,6 +345,8 @@
 				C828959D1C5D1F3F00A9754F /* IncidenciaViewController.m */,
 				C828959F1C5D240900A9754F /* INCIDENCIAPOREMAILViewController.h */,
 				C82895A01C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m */,
+				7894432B1C61233000386976 /* ProveedoresCellTableViewCell.h */,
+				7894432C1C61233000386976 /* ProveedoresCellTableViewCell.m */,
 				C8862CD31C5623B000FB905E /* Main.storyboard */,
 				C8862CD61C5623B000FB905E /* Images.xcassets */,
 				C8862CD81C5623B000FB905E /* LaunchScreen.xib */,
@@ -502,6 +560,8 @@
 				C82895951C5D170D00A9754F /* HSK_CFUtilities.m in Sources */,
 				C824AFEC1C5FC14B0099479F /* UIColor+KVNContrast.m in Sources */,
 				C824AFDE1C5F9DE60099479F /* UITextView+Placeholder.m in Sources */,
+				7894433A1C612D1900386976 /* TFHppleElement.m in Sources */,
+				789443411C616A0E00386976 /* NSString_stripHtml.m in Sources */,
 				C82895941C5D170D00A9754F /* Base64Transcoder.m in Sources */,
 				78BC73BF1C582261001E2AFB /* UCZProgressView.m in Sources */,
 				C8862CCC1C5623B000FB905E /* AppDelegate.m in Sources */,
@@ -509,14 +569,18 @@
 				C824AFEE1C5FC14B0099479F /* UIImage+KVNImageEffects.m in Sources */,
 				C824AFE51C5FC1320099479F /* KVNProgressConfiguration.m in Sources */,
 				C8862CCF1C5623B000FB905E /* FirstViewController.m in Sources */,
+				7894433B1C612D1900386976 /* XPathQuery.m in Sources */,
 				788B65D31C57EF5100081ABB /* ILAlertView.m in Sources */,
 				7894432A1C61201E00386976 /* ProveedoresTableViewController.m in Sources */,
 				C824AFED1C5FC14B0099479F /* UIImage+KVNEmpty.m in Sources */,
+				7894432D1C61233000386976 /* ProveedoresCellTableViewCell.m in Sources */,
 				C82895A11C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m in Sources */,
 				C824AFE41C5FC1320099479F /* KVNProgress.m in Sources */,
 				C82895971C5D170D00A9754F /* NSStream+SKPSMTPExtensions.m in Sources */,
+				789443391C612D1900386976 /* TFHpple.m in Sources */,
 				C8D6D5EB1C5FD8AB002DF570 /* CLTickerView.m in Sources */,
 				C88989431C5B7D2D0080052E /* SignupViewController.m in Sources */,
+				789443311C612BE400386976 /* ProveedorModel.m in Sources */,
 				C8862CC91C5623B000FB905E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,6 +703,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/,
+				);
 				INFOPLIST_FILE = GHFINCAS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -650,6 +719,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)/usr/include/libxml2",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/,
+				);
 				INFOPLIST_FILE = GHFINCAS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

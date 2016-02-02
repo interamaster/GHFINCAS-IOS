@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProveedoresTableViewController : UITableViewController
+@interface ProveedoresTableViewController : UITableViewController<UITableViewDataSource,UITableViewDataSource,NSURLConnectionDelegate>
+
+{
+    
+     NSMutableData *_responseData;
+}
+
 
 @end

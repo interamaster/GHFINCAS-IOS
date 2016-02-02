@@ -8,7 +8,20 @@
 
 #import "ProveedoresTableViewController.h"
 
+//par ala cell
+
+
+#import "ProveedoresCellTableViewCell.h"
+
+
+//par el html
+
+#import "TFHpple.h"
+#import "ProveedorModel.h"
+
 @interface ProveedoresTableViewController ()
+
+@property (strong, nonatomic) NSArray *members;
 
 @end
 
@@ -22,6 +35,333 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    //de java:
+     //String url = "https://jrdvsoft.wordpress.com/prueba-tabla/";
+    
+    [self CargaProvvedoresFromTableWordPress];
+    
+    
+}
+
+
+-(void)CargaProvvedoresFromTableWordPress{
+    
+      NSURL *tutorialsUrl  =[NSURL URLWithString:@"https://jrdvsoft.wordpress.com/prueba-tabla/"];
+      NSData *tutorialsHtmlData = [NSData dataWithContentsOfURL:tutorialsUrl];
+    
+    
+    
+    
+    
+     /*
+    // PTE pra hacerl ASYNC!!
+    NSURLRequest *site_request =
+    [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://jrdvsoft.wordpress.com/prueba-tabla/"]
+                     cachePolicy:NSURLRequestUseProtocolCachePolicy
+                 timeoutInterval:10.0];
+    
+    NSURLConnection *site_connection =
+    [[NSURLConnection alloc] initWithRequest:site_request delegate:self];
+*/
+  
+   
+    
+   
+    
+    TFHpple *tutorialsParser=  [TFHpple hppleWithHTMLData:tutorialsHtmlData];
+    
+    
+    
+    NSString *tutorialsXpathQueryString = @"//table[@class='ListaProveedores']//tr";//[translate(., '&#xA;', '')]";
+    
+   
+
+    NSArray *tutorialsNodes = [tutorialsParser searchWithXPathQuery:tutorialsXpathQueryString];
+    
+    
+    if ([tutorialsNodes count] == 0)
+        NSLog(@"nothing there");
+    else
+        NSLog(@"There are %d nodes", [tutorialsNodes count]);
+    
+    
+    
+    
+    NSMutableArray *newTutorials=[[  NSMutableArray alloc] initWithCapacity:0];
+    
+    NSUInteger index = 0;//para salatrno el peimrmor que son los titulo(header th)
+    
+    for ( TFHppleElement *element in  tutorialsNodes){
+        
+       
+        
+        if (index>0) {
+             index++;
+       
+            //solo si es >0
+        
+        if (element.raw.length>0){
+            
+            //http://stackoverflow.com/questions/16849797/trying-to-pull-tabledata-out-from-html
+        
+            NSString *cadenadevuleta=element.raw;
+        
+        NSArray* separatedParts = [cadenadevuleta componentsSeparatedByString:@"<td>"];
+        NSMutableArray* arrayOfResults = [[NSMutableArray alloc] init];
+        for (int i = 1; i < separatedParts.count; i++) {
+            NSRange range = [[separatedParts objectAtIndex:i] rangeOfString:@"</td>"];
+            NSString *partialResult = [[separatedParts objectAtIndex:i] substringToIndex:range.location];
+            [arrayOfResults addObject:partialResult];
+            
+            
+            /* esto da lo que quiero!!!:
+             
+             
+             Printing description of arrayOfResults:
+             <__NSArrayM 0x7f8a004ee860>(
+             0,
+             ASCENSORES URGENCIA 24 H,
+             <strong>Teléfonos urgencias</strong>
+             <p> <br/>
+             OTIS <span style="font-family:inherit;font-size:inherit;line-height:1.7;"><a href="tel:901240024">901.24.00.24</a></span></p>
+             <p>ORONA <a href="tel:954253869">954.25.38.69</a></p>
+             <p>JP ASCENSORES <a href="tel:661003215">661.00.32.15</a></p>
+             <p>SCHINDLER <a href="tel:900400272">900.40.02.72</a></p>
+             <p>THYSSEN <a href="tel:954515977">954.51.59.77</a></p>
+             <p>CARBONELL <a href="tel:954276598">954.27.65.98</a></p>
+             <p> </p>,
+             <img class="alignnone size-full wp-image-68" src="https://jrdvsoft.files.wordpress.com/2015/12/ascensor.png?w=960" alt="ascensor"/>
+             )
+             */
+   
+        }
+            
+            //una vez todos en el aray +se lo pasamos ok al member array:
+            
+            ProveedorModel *tutorial =[[ProveedorModel  alloc] init];
+            
+            
+            [newTutorials addObject:tutorial];
+            
+            
+            tutorial.ProveedorTelefono =[arrayOfResults objectAtIndex:0];
+             tutorial.ProveedorName =[arrayOfResults objectAtIndex:1];
+            tutorial.ProveedorDescripcion=[arrayOfResults objectAtIndex:2];
+            tutorial.ProveedorImagen=[arrayOfResults objectAtIndex:3];
+            
+            
+            
+            
+        
+        }
+        
+        }
+        
+        index++;
+        
+        
+    }
+    
+    
+   self.members= newTutorials;//ya los tengo ok en formato raw!! de momento
+    
+    
+    
+    [self.tableView reloadData];
+ 
+  
+
+}
+
+
+
+
+
+-(void)connection:(NSURLConnection *)site_connection didReceiveData:(NSData *)data
+{
+   // _responseData = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    
+     [_responseData appendData:data];
+    
+    
+    
+    
+    
+    TFHpple *tutorialsParser=  [TFHpple hppleWithHTMLData:_responseData];
+    
+    
+    
+    NSString *tutorialsXpathQueryString = @"//table[@class='ListaProveedores']//tr";//[translate(., '&#xA;', '')]";
+    
+    
+    
+    NSArray *tutorialsNodes = [tutorialsParser searchWithXPathQuery:tutorialsXpathQueryString];
+    
+    
+    if ([tutorialsNodes count] == 0)
+        NSLog(@"nothing there");
+    else
+        NSLog(@"There are %d nodes", [tutorialsNodes count]);
+    
+    
+    
+    
+    NSMutableArray *newTutorials=[[  NSMutableArray alloc] initWithCapacity:0];
+    
+    NSUInteger index = 0;//para salatrno el peimrmor que son los titulo(header th)
+    
+    for ( TFHppleElement *element in  tutorialsNodes){
+        
+        
+        
+        if (index>0) {
+            index++;
+            
+            //solo si es >0
+            
+            if (element.raw.length>0){
+                
+                //http://stackoverflow.com/questions/16849797/trying-to-pull-tabledata-out-from-html
+                
+                NSString *cadenadevuleta=element.raw;
+                
+                NSArray* separatedParts = [cadenadevuleta componentsSeparatedByString:@"<td>"];
+                NSMutableArray* arrayOfResults = [[NSMutableArray alloc] init];
+                for (int i = 1; i < separatedParts.count; i++) {
+                    NSRange range = [[separatedParts objectAtIndex:i] rangeOfString:@"</td>"];
+                    NSString *partialResult = [[separatedParts objectAtIndex:i] substringToIndex:range.location];
+                    [arrayOfResults addObject:partialResult];
+                    
+                    
+                    /* esto da lo que quiero!!!:
+                     
+                     
+                     Printing description of arrayOfResults:
+                     <__NSArrayM 0x7f8a004ee860>(
+                     0,
+                     ASCENSORES URGENCIA 24 H,
+                     <strong>Teléfonos urgencias</strong>
+                     <p> <br/>
+                     OTIS <span style="font-family:inherit;font-size:inherit;line-height:1.7;"><a href="tel:901240024">901.24.00.24</a></span></p>
+                     <p>ORONA <a href="tel:954253869">954.25.38.69</a></p>
+                     <p>JP ASCENSORES <a href="tel:661003215">661.00.32.15</a></p>
+                     <p>SCHINDLER <a href="tel:900400272">900.40.02.72</a></p>
+                     <p>THYSSEN <a href="tel:954515977">954.51.59.77</a></p>
+                     <p>CARBONELL <a href="tel:954276598">954.27.65.98</a></p>
+                     <p> </p>,
+                     <img class="alignnone size-full wp-image-68" src="https://jrdvsoft.files.wordpress.com/2015/12/ascensor.png?w=960" alt="ascensor"/>
+                     )
+                     */
+                    
+                    
+                }
+                
+                //una vez todos en el aray +se lo pasamos ok al member array:
+                
+                ProveedorModel *tutorial =[[ProveedorModel  alloc] init];
+                
+                
+                [newTutorials addObject:tutorial];
+                
+                
+                tutorial.ProveedorTelefono =[arrayOfResults objectAtIndex:0];
+                tutorial.ProveedorName =[arrayOfResults objectAtIndex:1];
+                tutorial.ProveedorDescripcion=[arrayOfResults objectAtIndex:2];
+                tutorial.ProveedorImagen=[arrayOfResults objectAtIndex:3];
+                
+                
+                
+                
+                
+            }
+            
+        }
+        
+        index++;
+        
+        
+    }
+    
+    
+    self.members= newTutorials;//ya los tengo ok en formato raw!! de momento
+    
+    
+    
+    [self.tableView reloadData];
+    
+    
+}
+
+
+-(NSString *)scanString:(NSString *)string
+startTag:(NSString *)startTag
+endTag:(NSString *)endTag
+{
+    
+    NSString* scanString = @"";
+    
+    if (string.length > 0) {
+        
+        
+        
+        NSArray* separatedParts = [string componentsSeparatedByString:@"<td>"];
+        NSMutableArray* arrayOfResults = [[NSMutableArray alloc] init];
+        for (int i = 1; i < separatedParts.count; i++) {
+            NSRange range = [[separatedParts objectAtIndex:i] rangeOfString:@"</td>"];
+            NSString *partialResult = [[separatedParts objectAtIndex:i] substringToIndex:range.location];
+            [arrayOfResults addObject:partialResult];
+        }
+        
+        /* esrto da lo que quiero!!!:
+         
+         
+         Printing description of arrayOfResults:
+         <__NSArrayM 0x7f8a004ee860>(
+         0,
+         ASCENSORES URGENCIA 24 H,
+         <strong>Teléfonos urgencias</strong>
+         <p> <br/>
+         OTIS <span style="font-family:inherit;font-size:inherit;line-height:1.7;"><a href="tel:901240024">901.24.00.24</a></span></p>
+         <p>ORONA <a href="tel:954253869">954.25.38.69</a></p>
+         <p>JP ASCENSORES <a href="tel:661003215">661.00.32.15</a></p>
+         <p>SCHINDLER <a href="tel:900400272">900.40.02.72</a></p>
+         <p>THYSSEN <a href="tel:954515977">954.51.59.77</a></p>
+         <p>CARBONELL <a href="tel:954276598">954.27.65.98</a></p>
+         <p> </p>,
+         <img class="alignnone size-full wp-image-68" src="https://jrdvsoft.files.wordpress.com/2015/12/ascensor.png?w=960" alt="ascensor"/>
+         )
+         */
+        
+        
+        
+        
+        
+        
+        NSScanner* scanner = [[NSScanner alloc] initWithString:string];
+        
+        @try {
+            [scanner scanUpToString:startTag intoString:nil];
+            scanner.scanLocation += [startTag length];
+            [scanner scanUpToString:endTag intoString:&scanString];
+        }
+        @catch (NSException *exception) {
+            return nil;
+        }
+        @finally {
+            NSLog(@"encontrado string: %@",scanString);
+            return scanString;
+        }
+        
+    }
+    
+    
+    NSLog(@"encontrado string: %@",scanString);
+    
+    return scanString;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,26 +372,42 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+ 
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+ 
     // Return the number of rows in the section.
-    return 0;
+   // return 0;
+    
+     return [self.members count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    
+    static NSString *CellIdentifier = @"ProveedorCell";
+    ProveedoresCellTableViewCell *cell = (ProveedoresCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
     
+    // [cell setupWithDictionary:[self.members objectAtIndex:indexPath.row]];
+    
+    [cell llenarconProveedor:[self.members objectAtIndex:indexPath.row]];
+    
+    
     return cell;
+
+    
+    // Configure the cell...
+    
+    //return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
