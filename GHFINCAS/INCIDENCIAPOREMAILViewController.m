@@ -169,7 +169,10 @@ static void dispatch_main_after(NSTimeInterval delay, void (^block)(void))
     emailMessage.requiresAuth = YES;
     emailMessage.login = @"jrdvsoftyopozi@gmail.com"; //sender email address
     emailMessage.pass = @"sevilla4"; //sender email password
-    emailMessage.subject =@"Incidencia ghfincas ios!!!";
+    
+    NSString *subject=[NSString stringWithFormat:@"Nueva Inicidencia en Comunidad: %@",PREF_NOMBRECMUNIDAD];
+    
+    emailMessage.subject =subject;
     emailMessage.wantsSecure = YES;
     emailMessage.delegate = self; // you must include <SKPSMTPMessageDelegate> to your class
     // NSString *messageBody = @"your email body message";
@@ -245,11 +248,24 @@ static void dispatch_main_after(NSTimeInterval delay, void (^block)(void))
     
     //IALERT para poder cerrar VC
     
-    
+    /*
     [ILAlertView showWithTitle:@"Su informacion se envio correctamente!!" message:@"En menos de 24h recibirá por el email facilitado su contraseña" closeButtonTitle:nil secondButtonTitle:@"OK" tappedSecondButton:^{
         //cerramos VC
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
+    
+    */
+    
+    //  mientras arreglo el del IALertrtView:
+    
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Su incidencia se envio correctamente!!"
+                                                        message:@"En breve procederemos a solucionarlo"
+                                                       delegate:self
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+    
+     
+    [alertView show];
     
 }
 // On Failure
@@ -368,7 +384,9 @@ static void dispatch_main_after(NSTimeInterval delay, void (^block)(void))
 - (void) alertStatus:(NSString *)msg :(NSString *)title :(int) tag
 {
     
-    /*
+    
+    //  mientras arreglo el del IALertrtView:
+    
      UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title
      message:msg
      delegate:self
@@ -376,11 +394,11 @@ static void dispatch_main_after(NSTimeInterval delay, void (^block)(void))
      otherButtonTitles:nil, nil];
      alertView.tag = tag;
      [alertView show];
-     */
+    
      
     
     
-  [ILAlertView showWithTitle:title message:msg closeButtonTitle:@"OK" secondButtonTitle:nil tappedSecondButton:nil];
+  //[ILAlertView showWithTitle:title message:msg closeButtonTitle:@"OK" secondButtonTitle:nil tappedSecondButton:nil];
     
     
     
@@ -388,5 +406,21 @@ static void dispatch_main_after(NSTimeInterval delay, void (^block)(void))
     
     
 }
+
+
+//delegate del UIALertView mientras arreglo el del IALertrtView
+
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if([title isEqualToString:@"OK"])//el OK de envio bien es en MATUSCULAS LAS 2 !!!!
+    {
+        NSLog(@"Envio OK saliendo");
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+     }
 
 @end

@@ -23,7 +23,7 @@
 #import "KVNProgress.h"
 
 
-@interface INCIDENCIAPOREMAILViewController : UIViewController<SKPSMTPMessageDelegate,MFMailComposeViewControllerDelegate>{
+@interface INCIDENCIAPOREMAILViewController : UIViewController<SKPSMTPMessageDelegate,MFMailComposeViewControllerDelegate,UIAlertViewDelegate>{
     
     NSString *PREF_EMAIL;
     
