@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+//para la circularProgress:
 
-@interface ComunidadViewController : UIViewController
+#import "KVNProgress.h"
+
+@interface ComunidadViewController : UIViewController<UIWebViewDelegate>
 @property (strong, nonatomic) IBOutlet UIWebView *webview;
+
+//para la circularProgress:
+@property (nonatomic) KVNProgressConfiguration *basicConfiguration;
 
 @end

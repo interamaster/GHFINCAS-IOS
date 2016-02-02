@@ -7,6 +7,10 @@
 //
 
 #import "ComunidadViewController.h"
+//para la circularProgress:
+
+#import "KVNProgress.h"
+
 
 @interface ComunidadViewController ()
 
@@ -19,7 +23,14 @@
     // Do any additional setup after loading the view.
     
     
+    //Creasmos el KVNPorgress
+    
+    self.basicConfiguration = [KVNProgressConfiguration defaultConfiguration];
+    
+    
     NSMutableURLRequest * request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.ghfincas.es/oficina-virtual"]];
+    self.webview.delegate=self;
+    
     [self.webview loadRequest:request];
     
     
@@ -39,5 +50,36 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+
+
+-(void)webViewDidStartLoad:(UIWebView *)webView{
+    
+    
+    //emepzamos la animacion
+    
+    [KVNProgress showProgress:0.0f
+                       status:@"Loading with progress..."];
+    self.basicConfiguration.backgroundType = KVNProgressBackgroundTypeSolid;
+    
+    [KVNProgress showWithStatus:@"Accediendo servidor seguro GHFINCAS.."];
+
+    
+    
+}
+
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    
+    
+    
+     //paramos la animacion
+    [KVNProgress dismiss];
+    
+    self.basicConfiguration.backgroundType = KVNProgressBackgroundTypeBlurred;
+    
+    
+    
+}
 
 @end
