@@ -313,7 +313,9 @@ static void dispatch_main_after(NSTimeInterval delay, void (^block)(void))
         
         
         // Email Subject
-        NSString *emailTitle = @"nueva alta ghfincas ios";
+       // NSString *emailTitle = @"nueva alta ghfincas ios";
+         NSString *emailTitle=[NSString stringWithFormat:@"Nueva Inicidencia en Comunidad: %@",PREF_NOMBRECMUNIDAD];
+        
         // Email Content
         NSString *tituloIncidencia=self.titulotext.text;
         NSString *DescripcionIncidencia=self.descripociontextview.text;
