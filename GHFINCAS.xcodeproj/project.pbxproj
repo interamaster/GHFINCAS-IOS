@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7833086E1C611E3200BC3882 /* ProveedoresTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7833086D1C611E3200BC3882 /* ProveedoresTableViewController.m */; };
 		788B65CF1C57EF2900081ABB /* alertBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 788B65CD1C57EF2900081ABB /* alertBkg.png */; };
 		788B65D01C57EF2900081ABB /* alertBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 788B65CE1C57EF2900081ABB /* alertBkg@2x.png */; };
 		788B65D31C57EF5100081ABB /* ILAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 788B65D21C57EF5100081ABB /* ILAlertView.m */; };
 		788B65D61C57F82F00081ABB /* fondo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 788B65D51C57F82F00081ABB /* fondo2.jpg */; };
 		788B65D91C57FB4700081ABB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 788B65D81C57FB4700081ABB /* LoginViewController.m */; };
+		7894432A1C61201E00386976 /* ProveedoresTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 789443291C61201E00386976 /* ProveedoresTableViewController.m */; };
 		78BC73BF1C582261001E2AFB /* UCZProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 78BC73BE1C582261001E2AFB /* UCZProgressView.m */; };
 		C80A0EBD1C576EF8003E2013 /* fondoghfincasactivity1.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EB71C576EF8003E2013 /* fondoghfincasactivity1.png */; };
 		C80A0EBE1C576EF8003E2013 /* jrdvsoftlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EB81C576EF8003E2013 /* jrdvsoftlogo.png */; };
@@ -70,8 +70,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7833086C1C611E3200BC3882 /* ProveedoresTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProveedoresTableViewController.h; sourceTree = "<group>"; };
-		7833086D1C611E3200BC3882 /* ProveedoresTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProveedoresTableViewController.m; sourceTree = "<group>"; };
 		788B65CD1C57EF2900081ABB /* alertBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alertBkg.png; sourceTree = "<group>"; };
 		788B65CE1C57EF2900081ABB /* alertBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alertBkg@2x.png"; sourceTree = "<group>"; };
 		788B65D11C57EF5100081ABB /* ILAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILAlertView.h; sourceTree = "<group>"; };
@@ -79,6 +77,8 @@
 		788B65D51C57F82F00081ABB /* fondo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo2.jpg; sourceTree = "<group>"; };
 		788B65D71C57FB4700081ABB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		788B65D81C57FB4700081ABB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		789443281C61201E00386976 /* ProveedoresTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProveedoresTableViewController.h; sourceTree = "<group>"; };
+		789443291C61201E00386976 /* ProveedoresTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProveedoresTableViewController.m; sourceTree = "<group>"; };
 		78BC73BD1C582261001E2AFB /* UCZProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UCZProgressView.h; sourceTree = "<group>"; };
 		78BC73BE1C582261001E2AFB /* UCZProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UCZProgressView.m; sourceTree = "<group>"; };
 		C80A0EB71C576EF8003E2013 /* fondoghfincasactivity1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondoghfincasactivity1.png; sourceTree = "<group>"; };
@@ -277,8 +277,8 @@
 				C8862CCB1C5623B000FB905E /* AppDelegate.m */,
 				C8862CCD1C5623B000FB905E /* FirstViewController.h */,
 				C8862CCE1C5623B000FB905E /* FirstViewController.m */,
-				7833086C1C611E3200BC3882 /* ProveedoresTableViewController.h */,
-				7833086D1C611E3200BC3882 /* ProveedoresTableViewController.m */,
+				789443281C61201E00386976 /* ProveedoresTableViewController.h */,
+				789443291C61201E00386976 /* ProveedoresTableViewController.m */,
 				788B65D71C57FB4700081ABB /* LoginViewController.h */,
 				788B65D81C57FB4700081ABB /* LoginViewController.m */,
 				C82895991C5D1C4300A9754F /* ComunidadViewController.h */,
@@ -510,11 +510,11 @@
 				C824AFE51C5FC1320099479F /* KVNProgressConfiguration.m in Sources */,
 				C8862CCF1C5623B000FB905E /* FirstViewController.m in Sources */,
 				788B65D31C57EF5100081ABB /* ILAlertView.m in Sources */,
+				7894432A1C61201E00386976 /* ProveedoresTableViewController.m in Sources */,
 				C824AFED1C5FC14B0099479F /* UIImage+KVNEmpty.m in Sources */,
 				C82895A11C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m in Sources */,
 				C824AFE41C5FC1320099479F /* KVNProgress.m in Sources */,
 				C82895971C5D170D00A9754F /* NSStream+SKPSMTPExtensions.m in Sources */,
-				7833086E1C611E3200BC3882 /* ProveedoresTableViewController.m in Sources */,
 				C8D6D5EB1C5FD8AB002DF570 /* CLTickerView.m in Sources */,
 				C88989431C5B7D2D0080052E /* SignupViewController.m in Sources */,
 				C8862CC91C5623B000FB905E /* main.m in Sources */,
