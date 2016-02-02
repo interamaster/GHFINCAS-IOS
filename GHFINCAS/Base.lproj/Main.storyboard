@@ -146,33 +146,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M7B-dA-lDX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334.5" y="202.5"/>
+            <point key="canvasLocation" x="330.5" y="1104.5"/>
         </scene>
         <!--PROVEEDOR-->
-        <scene sceneID="wg7-f3-ORb">
+        <scene sceneID="RQs-Gy-Pod">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                <tableViewController id="X2e-up-BJC" customClass="ProveedoresTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="qGI-Uu-h3s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="PROVEEDOR" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="zEq-FU-wV5">
-                                <rect key="frame" x="66" y="70" width="231" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="PROVEEDOR" image="flat_proveedores" id="cPa-gy-q4n"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="FuW-Kb-OSg">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FuW-Kb-OSg" id="TGE-mU-Z8r">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="X2e-up-BJC" id="QwM-RS-7de"/>
+                            <outlet property="delegate" destination="X2e-up-BJC" id="TI6-9X-D5O"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="PROVEEDOR" image="flat_proveedores" id="Pi1-Lv-7Mr"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="elf-Vx-fwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="855.5" y="-620.5"/>
+            <point key="canvasLocation" x="414.5" y="-1418.5"/>
         </scene>
         <!--COMUNICADOS-->
         <scene sceneID="ysZ-4q-Jq9">
@@ -198,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1h-Yh-M2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885.5" y="184.5"/>
+            <point key="canvasLocation" x="341.5" y="184.5"/>
         </scene>
         <!--INCIDENCIAS-->
         <scene sceneID="Xm6-U4-R6q">
@@ -273,7 +274,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="neD-vu-iPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437.5" y="-620.5"/>
+            <point key="canvasLocation" x="1029.5" y="-32.5"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="Fa7-21-jDt">
@@ -493,7 +494,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="X2e-up-BJC" kind="relationship" relationship="viewControllers" id="gZf-Us-zkf"/>
                         <segue destination="sBc-fe-8Db" kind="relationship" relationship="viewControllers" id="Yau-c9-DRb"/>
                         <segue destination="N9Q-w8-Lex" kind="relationship" relationship="viewControllers" id="0SS-FZ-Mdh"/>
                         <segue destination="5xm-qo-YvD" kind="relationship" relationship="viewControllers" id="asM-Ny-25N"/>
@@ -555,7 +556,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ES-qi-RPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1885.5" y="-620.5"/>
+            <point key="canvasLocation" x="1563.5" y="-40.5"/>
         </scene>
     </scenes>
     <resources>

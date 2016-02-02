@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7833086E1C611E3200BC3882 /* ProveedoresTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7833086D1C611E3200BC3882 /* ProveedoresTableViewController.m */; };
 		788B65CF1C57EF2900081ABB /* alertBkg.png in Resources */ = {isa = PBXBuildFile; fileRef = 788B65CD1C57EF2900081ABB /* alertBkg.png */; };
 		788B65D01C57EF2900081ABB /* alertBkg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 788B65CE1C57EF2900081ABB /* alertBkg@2x.png */; };
 		788B65D31C57EF5100081ABB /* ILAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 788B65D21C57EF5100081ABB /* ILAlertView.m */; };
@@ -38,7 +39,6 @@
 		C8862CC91C5623B000FB905E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8862CC81C5623B000FB905E /* main.m */; };
 		C8862CCC1C5623B000FB905E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8862CCB1C5623B000FB905E /* AppDelegate.m */; };
 		C8862CCF1C5623B000FB905E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8862CCE1C5623B000FB905E /* FirstViewController.m */; };
-		C8862CD21C5623B000FB905E /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8862CD11C5623B000FB905E /* SecondViewController.m */; };
 		C8862CD51C5623B000FB905E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8862CD31C5623B000FB905E /* Main.storyboard */; };
 		C8862CD71C5623B000FB905E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8862CD61C5623B000FB905E /* Images.xcassets */; };
 		C8862CDA1C5623B000FB905E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8862CD81C5623B000FB905E /* LaunchScreen.xib */; };
@@ -70,6 +70,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7833086C1C611E3200BC3882 /* ProveedoresTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProveedoresTableViewController.h; sourceTree = "<group>"; };
+		7833086D1C611E3200BC3882 /* ProveedoresTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProveedoresTableViewController.m; sourceTree = "<group>"; };
 		788B65CD1C57EF2900081ABB /* alertBkg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alertBkg.png; sourceTree = "<group>"; };
 		788B65CE1C57EF2900081ABB /* alertBkg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "alertBkg@2x.png"; sourceTree = "<group>"; };
 		788B65D11C57EF5100081ABB /* ILAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILAlertView.h; sourceTree = "<group>"; };
@@ -123,8 +125,6 @@
 		C8862CCB1C5623B000FB905E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C8862CCD1C5623B000FB905E /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		C8862CCE1C5623B000FB905E /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		C8862CD01C5623B000FB905E /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		C8862CD11C5623B000FB905E /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		C8862CD41C5623B000FB905E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8862CD61C5623B000FB905E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C8862CD91C5623B000FB905E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -277,8 +277,8 @@
 				C8862CCB1C5623B000FB905E /* AppDelegate.m */,
 				C8862CCD1C5623B000FB905E /* FirstViewController.h */,
 				C8862CCE1C5623B000FB905E /* FirstViewController.m */,
-				C8862CD01C5623B000FB905E /* SecondViewController.h */,
-				C8862CD11C5623B000FB905E /* SecondViewController.m */,
+				7833086C1C611E3200BC3882 /* ProveedoresTableViewController.h */,
+				7833086D1C611E3200BC3882 /* ProveedoresTableViewController.m */,
 				788B65D71C57FB4700081ABB /* LoginViewController.h */,
 				788B65D81C57FB4700081ABB /* LoginViewController.m */,
 				C82895991C5D1C4300A9754F /* ComunidadViewController.h */,
@@ -503,7 +503,6 @@
 				C824AFEC1C5FC14B0099479F /* UIColor+KVNContrast.m in Sources */,
 				C824AFDE1C5F9DE60099479F /* UITextView+Placeholder.m in Sources */,
 				C82895941C5D170D00A9754F /* Base64Transcoder.m in Sources */,
-				C8862CD21C5623B000FB905E /* SecondViewController.m in Sources */,
 				78BC73BF1C582261001E2AFB /* UCZProgressView.m in Sources */,
 				C8862CCC1C5623B000FB905E /* AppDelegate.m in Sources */,
 				788B65D91C57FB4700081ABB /* LoginViewController.m in Sources */,
@@ -515,6 +514,7 @@
 				C82895A11C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m in Sources */,
 				C824AFE41C5FC1320099479F /* KVNProgress.m in Sources */,
 				C82895971C5D170D00A9754F /* NSStream+SKPSMTPExtensions.m in Sources */,
+				7833086E1C611E3200BC3882 /* ProveedoresTableViewController.m in Sources */,
 				C8D6D5EB1C5FD8AB002DF570 /* CLTickerView.m in Sources */,
 				C88989431C5B7D2D0080052E /* SignupViewController.m in Sources */,
 				C8862CC91C5623B000FB905E /* main.m in Sources */,
