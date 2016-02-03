@@ -19,6 +19,17 @@
 #import "TFHpple.h"
 #import "ProveedorModel.h"
 
+
+//para el parallax
+
+
+#import "ParallaxHeaderView.h"
+
+//para el detalleProveedor
+
+#import "DetalleProveedorViewController.h"
+
+
 @interface ProveedoresTableViewController ()
 
 @property (strong, nonatomic) NSArray *members;
@@ -40,9 +51,37 @@
     //de java:
      //String url = "https://jrdvsoft.wordpress.com/prueba-tabla/";
     
+    
+    
+    //parallalalax
+    
+    
+    // Create ParallaxHeaderView with specified size, and set it as uitableView Header, that's it
+    ParallaxHeaderView *headerView = [ParallaxHeaderView parallaxHeaderViewWithImage:[UIImage imageNamed:@"logo7.jpg"]
+                                                                             forSize:CGSizeMake(self.tableView.frame.size.width, 200)];
+    
+    
+    
+    
+    headerView.headerTitleLabel.text =  @"Proveedores de Confianza";
+    
+    [self.tableView  setTableHeaderView:headerView];
+    
     [self CargaProvvedoresFromTableWordPress];
     
     
+}
+
+#pragma mark -
+#pragma mark UISCrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView == self.tableView)
+    {
+        // pass the current offset of the UITableView so that the ParallaxHeaderView layouts the subViews.
+        [(ParallaxHeaderView *)self.tableView.tableHeaderView layoutHeaderViewForScrollViewOffset:scrollView.contentOffset];
+    }
 }
 
 
@@ -420,6 +459,13 @@ endTag:(NSString *)endTag
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"puñlsadoa tabala:%@");
+    
+}
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -494,14 +540,24 @@ endTag:(NSString *)endTag
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    
+    if ([[segue identifier] isEqualToString:@"DetalleProveedor"])
+    {
+        DetalleProveedorViewController *detailViewController =
+        [segue destinationViewController];
+        
+        // and add any other code which you want to perform.
+        
+    }
 }
-*/
+
 
 @end

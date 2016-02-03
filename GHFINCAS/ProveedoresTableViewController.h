@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ProveedoresTableViewController : UITableViewController<UITableViewDataSource,UITableViewDataSource,NSURLConnectionDelegate>
+@interface ProveedoresTableViewController : UITableViewController<UITableViewDataSource,UITableViewDelegate,NSURLConnectionDelegate>
 
 {
     

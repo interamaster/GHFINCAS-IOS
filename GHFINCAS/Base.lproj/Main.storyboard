@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="xaQ-vm-rmT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="xaQ-vm-rmT">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
@@ -155,7 +155,7 @@
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="293" sectionHeaderHeight="22" sectionFooterHeight="22" id="Hko-d8-SyY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ProveedorCell" rowHeight="293" id="2hc-QR-O03" customClass="ProveedoresCellTableViewCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="280"/>
@@ -165,11 +165,11 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" id="adH-fW-zuz" userLabel="mainView">
-                                            <rect key="frame" x="16" y="16" width="351" height="264"/>
+                                            <rect key="frame" x="16" y="16" width="351" height="250"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="eo8-Uj-aCJ" userLabel="photo">
-                                                    <rect key="frame" x="0.0" y="8" width="351" height="195"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="eo8-Uj-aCJ" userLabel="photo">
+                                                    <rect key="frame" x="0.0" y="-2" width="351" height="203"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PROVEEDOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yd9-xv-M6h" userLabel="nameLabel">
@@ -179,18 +179,18 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Descripcion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a4j-wc-7XD" userLabel="titleLabel">
-                                                    <rect key="frame" x="8" y="237" width="321" height="21"/>
+                                                    <rect key="frame" x="8" y="239" width="321" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view alpha="0.28999999165534973" contentMode="scaleToFill" id="5gN-Eb-TrI" userLabel="namebg">
-                                                    <rect key="frame" x="0.0" y="201" width="351" height="32"/>
+                                                    <rect key="frame" x="0.0" y="199" width="351" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -200,7 +200,7 @@
                                     <outlet property="descripcionProveedor" destination="a4j-wc-7XD" id="U6e-Ri-vty"/>
                                     <outlet property="mainView" destination="adH-fW-zuz" id="hlM-sg-4Og"/>
                                     <outlet property="nameProveedor" destination="yd9-xv-M6h" id="bbF-DC-xYV"/>
-                                    <segue destination="RTh-pC-JyG" kind="push" id="36g-Um-nl3"/>
+                                    <segue destination="RTh-pC-JyG" kind="push" id="3Xv-gE-hf7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -216,10 +216,10 @@
             </objects>
             <point key="canvasLocation" x="1001.5" y="-1418.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalle Proveedor View Controller-->
         <scene sceneID="Ecv-pZ-CG1">
             <objects>
-                <viewController id="RTh-pC-JyG" sceneMemberID="viewController">
+                <viewController id="RTh-pC-JyG" customClass="DetalleProveedorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rRS-6k-fiH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -76,6 +76,9 @@
 		C8862D001C57693D00FB905E /* flat_mail.png in Resources */ = {isa = PBXBuildFile; fileRef = C8862CF71C57693D00FB905E /* flat_mail.png */; };
 		C8862D011C57693D00FB905E /* flat_proveedores1.png in Resources */ = {isa = PBXBuildFile; fileRef = C8862CF81C57693D00FB905E /* flat_proveedores1.png */; };
 		C88989431C5B7D2D0080052E /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C88989421C5B7D2D0080052E /* SignupViewController.m */; };
+		C8A431291C62278700076758 /* ParallaxHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A431261C62278700076758 /* ParallaxHeaderView.m */; };
+		C8A4312A1C62278700076758 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A431281C62278700076758 /* UIImage+ImageEffects.m */; };
+		C8A4312D1C622D4900076758 /* DetalleProveedorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A4312C1C622D4900076758 /* DetalleProveedorViewController.m */; };
 		C8D6D5EA1C5FD8AB002DF570 /* CLScrollview.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6D5E71C5FD8AB002DF570 /* CLScrollview.m */; };
 		C8D6D5EB1C5FD8AB002DF570 /* CLTickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6D5E91C5FD8AB002DF570 /* CLTickerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C8DEEB521C5BE5E200C8E6CC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEEB511C5BE5E200C8E6CC /* CFNetwork.framework */; };
@@ -211,6 +214,12 @@
 		C8862CF81C57693D00FB905E /* flat_proveedores1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flat_proveedores1.png; sourceTree = "<group>"; };
 		C88989411C5B7D2D0080052E /* SignupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignupViewController.h; sourceTree = "<group>"; };
 		C88989421C5B7D2D0080052E /* SignupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignupViewController.m; sourceTree = "<group>"; };
+		C8A431251C62278700076758 /* ParallaxHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxHeaderView.h; sourceTree = "<group>"; };
+		C8A431261C62278700076758 /* ParallaxHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxHeaderView.m; sourceTree = "<group>"; };
+		C8A431271C62278700076758 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		C8A431281C62278700076758 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		C8A4312B1C622D4900076758 /* DetalleProveedorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalleProveedorViewController.h; sourceTree = "<group>"; };
+		C8A4312C1C622D4900076758 /* DetalleProveedorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalleProveedorViewController.m; sourceTree = "<group>"; };
 		C8D6D5E61C5FD8AB002DF570 /* CLScrollview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLScrollview.h; sourceTree = "<group>"; };
 		C8D6D5E71C5FD8AB002DF570 /* CLScrollview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLScrollview.m; sourceTree = "<group>"; };
 		C8D6D5E81C5FD8AB002DF570 /* CLTickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTickerView.h; sourceTree = "<group>"; };
@@ -413,6 +422,7 @@
 		C8862CC51C5623B000FB905E /* GHFINCAS */ = {
 			isa = PBXGroup;
 			children = (
+				C8A431241C62277400076758 /* PARALALLAX */,
 				78C80AEE1C61E5CF00430008 /* SDWebImage */,
 				7894433E1C6169F300386976 /* HTML SHITS */,
 				789443321C612D0200386976 /* HPPLE */,
@@ -425,6 +435,8 @@
 				C8862CCE1C5623B000FB905E /* FirstViewController.m */,
 				789443281C61201E00386976 /* ProveedoresTableViewController.h */,
 				789443291C61201E00386976 /* ProveedoresTableViewController.m */,
+				C8A4312B1C622D4900076758 /* DetalleProveedorViewController.h */,
+				C8A4312C1C622D4900076758 /* DetalleProveedorViewController.m */,
 				788B65D71C57FB4700081ABB /* LoginViewController.h */,
 				788B65D81C57FB4700081ABB /* LoginViewController.m */,
 				C82895991C5D1C4300A9754F /* ComunidadViewController.h */,
@@ -493,6 +505,17 @@
 				C8862CF81C57693D00FB905E /* flat_proveedores1.png */,
 			);
 			name = iconos;
+			sourceTree = "<group>";
+		};
+		C8A431241C62277400076758 /* PARALALLAX */ = {
+			isa = PBXGroup;
+			children = (
+				C8A431251C62278700076758 /* ParallaxHeaderView.h */,
+				C8A431261C62278700076758 /* ParallaxHeaderView.m */,
+				C8A431271C62278700076758 /* UIImage+ImageEffects.h */,
+				C8A431281C62278700076758 /* UIImage+ImageEffects.m */,
+			);
+			name = PARALALLAX;
 			sourceTree = "<group>";
 		};
 		C8D6D5E51C5FD890002DF570 /* CLTICKERVIEW */ = {
@@ -648,11 +671,13 @@
 				78C80B181C61E5EA00430008 /* SDWebImagePrefetcher.m in Sources */,
 				C82895961C5D170D00A9754F /* NSData+Base64Additions.m in Sources */,
 				78C80B161C61E5EA00430008 /* SDWebImageDownloaderOperation.m in Sources */,
+				C8A4312D1C622D4900076758 /* DetalleProveedorViewController.m in Sources */,
 				78C80B1D1C61E5EA00430008 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C828959E1C5D1F3F00A9754F /* IncidenciaViewController.m in Sources */,
 				C82895951C5D170D00A9754F /* HSK_CFUtilities.m in Sources */,
 				C824AFEC1C5FC14B0099479F /* UIColor+KVNContrast.m in Sources */,
 				78C80B1C1C61E5EA00430008 /* UIImage+WebP.m in Sources */,
+				C8A431291C62278700076758 /* ParallaxHeaderView.m in Sources */,
 				78C80B141C61E5EA00430008 /* SDWebImageDecoder.m in Sources */,
 				78C80B1B1C61E5EA00430008 /* UIImage+MultiFormat.m in Sources */,
 				78C80B121C61E5EA00430008 /* SDImageCache.m in Sources */,
@@ -673,6 +698,7 @@
 				788B65D31C57EF5100081ABB /* ILAlertView.m in Sources */,
 				7894432A1C61201E00386976 /* ProveedoresTableViewController.m in Sources */,
 				78C80B1F1C61E5EA00430008 /* UIView+WebCacheOperation.m in Sources */,
+				C8A4312A1C62278700076758 /* UIImage+ImageEffects.m in Sources */,
 				C824AFED1C5FC14B0099479F /* UIImage+KVNEmpty.m in Sources */,
 				78C80B101C61E5EA00430008 /* MKAnnotationView+WebCache.m in Sources */,
 				78C80B1E1C61E5EA00430008 /* UIImageView+WebCache.m in Sources */,

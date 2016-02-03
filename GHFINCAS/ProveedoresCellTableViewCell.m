@@ -58,7 +58,18 @@
     
     
     self.mainView.layer.cornerRadius = 10;
-    self.mainView.layer.masksToBounds = YES;
+   self.mainView.layer.masksToBounds = YES;
+    
+    //le damos una sombra..no hace nada pte..
+    
+    /*
+    
+    self.mainView.layer.shadowOffset = CGSizeMake(10, 0);
+    self.mainView.layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.mainView.layer.shadowRadius = 5;
+    self.mainView.layer.shadowOpacity = .25;
+     
+     */
     
     //self.Proveedrorfoto.image = [UIImage imageNamed:[dictionary valueForKey:@"image"]];//asi es i esta en local!!
     
