@@ -149,10 +149,51 @@
             tutorial.ProveedorTelefono =[arrayOfResults objectAtIndex:0];
              tutorial.ProveedorName =[arrayOfResults objectAtIndex:1];
             tutorial.ProveedorDescripcion=[arrayOfResults objectAtIndex:2];
-            tutorial.ProveedorImagen=[arrayOfResults objectAtIndex:3];
+           // tutorial.ProveedorImagen=[arrayOfResults objectAtIndex:3];
             
             
             
+            
+            //amos a sacra la image correcta soo con la src:
+            
+            
+            NSArray* soloimagen = [cadenadevuleta componentsSeparatedByString:@"src="];
+            NSMutableArray* arrayOfImagsrc = [[NSMutableArray alloc] init];
+            for (int i = 1; i < soloimagen.count; i++) {
+                NSRange range = [[soloimagen objectAtIndex:i] rangeOfString:@"?"];
+                NSString *partialResult = [[soloimagen objectAtIndex:i] substringToIndex:range.location];
+                [arrayOfImagsrc addObject:partialResult];
+                
+            }
+            
+            
+            NSLog(@"imagensrc: %@",[arrayOfImagsrc objectAtIndex:0]);
+            
+            
+            /*
+              imagensrc: "https://jrdvsoft.files.wordpress.com/2015/12/ascensor.png
+              imagensrc: "https://jrdvsoft.files.wordpress.com/2015/12/alcantarillado2.png
+              imagensrc: "https://jrdvsoft.files.wordpress.com/2015/12/extintor1.png
+               imagensrc: "https://jrdvsoft.files.wordpress.com/2015/12/repvarias.png
+               imagensrc: "https://jrdvsoft.files.wordpress.com/2015/12/gas.png
+               imagensrc: "https://jrdvsoft.files.wordpress.com/2015/12/logo_andisur_alta.jpg
+               imagensrc: "https://jrdvsoft.files.wordpress.com/2015/12/ac.jpg
+              imagensrc: "https://jrdvsoft.files.wordpress.com/2015/12/logo-asesorialomas.png
+              . . .
+             */
+            
+            
+            //sale OK solo falta quitar la ", pero ponendola en la busqueda ' tampoco sale..
+            
+            
+            NSString *src=[arrayOfImagsrc objectAtIndex:0];
+            
+            
+            if ( [src length] > 1) {
+                src = [src substringFromIndex:1];
+            }
+            
+            tutorial.ProveedorImagen=src;
             
         
         }
@@ -271,10 +312,20 @@
                 tutorial.ProveedorDescripcion=[arrayOfResults objectAtIndex:2];
                 tutorial.ProveedorImagen=[arrayOfResults objectAtIndex:3];
                 
+                //amos a sacra la image correcta soo con la src:
                 
                 
+                NSArray* soloimagen = [cadenadevuleta componentsSeparatedByString:@"src='"];
+                NSMutableArray* arrayOfImagsrc = [[NSMutableArray alloc] init];
+                for (int i = 1; i < soloimagen.count; i++) {
+                    NSRange range = [[soloimagen objectAtIndex:i] rangeOfString:@"?"];
+                    NSString *partialResult = [[soloimagen objectAtIndex:i] substringToIndex:range.location];
+                    [arrayOfImagsrc addObject:partialResult];
+
+                  }
                 
                 
+                NSLog(@"imagensrc: %@",[arrayOfImagsrc objectAtIndex:0]);
             }
             
         }

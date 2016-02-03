@@ -18,6 +18,12 @@
 
 
 
+//para elasyn de las imagees
+
+//#import <SDWebImage/UIImageView+WebCache.h>
+
+
+#import "UIImageView+WebCache.h"
 
 @implementation ProveedoresCellTableViewCell
 
@@ -104,10 +110,19 @@
     self.descripcionProveedor.text = htmlString;
     //pte foto!!!
     
+    //http://iosmadesimple.blogspot.com.es/2013/04/lazy-image-loading.html
+    /*
+    // Here we use the new provided setImageWithURL: method to load the web image
+    [cell.imageView setImageWithURL:[NSURL URLWithString:[items objectAtIndex:indexPath.row]]  placeholderImage:[UIImage imageNamed:@"Hisoka.jpg"]];
+    cell.imageSource.text = [items objectAtIndex:indexPath.row];
+
+    */
     
-    
+    //[self.Proveedrorfoto.image  setImageWithURL:[NSURL URLWithString:[proveedor.ProveedorImagen]  placeholderImage:[UIImage imageNamed:@"logo7.jpg"]];
 
     
+    [self.Proveedrorfoto  sd_setImageWithURL:[NSURL URLWithString:proveedor.ProveedorImagen] placeholderImage:[UIImage imageNamed:@"logo7.jpg"] ];
+     
 }
 
 
