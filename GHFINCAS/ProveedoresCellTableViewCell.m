@@ -111,7 +111,7 @@
    // self.descripcionProveedor.text = proveedor.ProveedorDescripcion;
     
     
-    //lo pngo con formato HTML:
+    //lo pngo sin formato HTML:
     
     NSString *htmlString=[ proveedor.ProveedorDescripcion stripHtml];
     

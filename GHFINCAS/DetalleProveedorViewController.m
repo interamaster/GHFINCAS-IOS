@@ -8,6 +8,22 @@
 
 #import "DetalleProveedorViewController.h"
 
+
+//para elasyn de las imagees
+
+
+
+
+#import "UIImageView+WebCache.h"
+
+
+//para el alertView que marque el telfono
+
+#import "ILAlertView.h"
+
+
+
+
 @interface DetalleProveedorViewController ()
 
 @end
@@ -17,6 +33,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    self.NombreProveedor.text=self.ProveedorPasado.ProveedorName;
+    //self.WebDescripcion=self.ProveedorPasado.ProveedorDescripcion;
+    [self.WebDescripcion loadHTMLString:self.ProveedorPasado.ProveedorDescripcion baseURL:nil];
+    
+    
+    
+    [self.FotoProveedor  sd_setImageWithURL:[NSURL URLWithString:self.ProveedorPasado.ProveedorImagen] placeholderImage:[UIImage imageNamed:@"logo7.jpg"] ];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,4 +61,34 @@
 }
 */
 
+- (IBAction)BotonLlamar:(id)sender {
+    
+    
+    
+   // NSString *phNo = @"673787175";
+    
+    NSString *phNo = self.ProveedorPasado.ProveedorTelefono;
+    
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString stringWithFormat:@"telprompt:%@",phNo]];
+    
+    
+    
+    
+    
+    
+    if([[UIApplication sharedApplication] canOpenURL:phoneUrl]){
+        
+        [ILAlertView showWithTitle:@"LLAMAR PROVEEDOR!!"
+                           message:[@"Quieres llamar a " stringByAppendingString:phNo]
+                  closeButtonTitle:@"No"
+                 secondButtonTitle:@"SI"
+                tappedSecondButton:^{
+                    //aqui ahora llamamos al telefno
+                    [[UIApplication sharedApplication] openURL:phoneUrl];
+                    
+                }];
+        
+        
+    };
+}
 @end

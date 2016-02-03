@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+#import "ProveedorModel.h"
+
+
+
 @interface DetalleProveedorViewController : UIViewController
+
+@property (strong, nonatomic) IBOutlet UIImageView *FotoProveedor;
+
+@property (strong, nonatomic) IBOutlet UIWebView *WebDescripcion;
+@property(nonatomic,strong)ProveedorModel *ProveedorPasado;
+@property (strong, nonatomic) IBOutlet UILabel *NombreProveedor;
+- (IBAction)BotonLlamar:(id)sender;
 
 @end

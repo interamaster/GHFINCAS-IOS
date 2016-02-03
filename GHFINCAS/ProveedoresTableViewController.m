@@ -460,10 +460,6 @@ endTag:(NSString *)endTag
 }
 
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"puñlsadoa tabala:%@");
-    
-}
 
 
 #pragma mark - Table view data source
@@ -551,8 +547,9 @@ endTag:(NSString *)endTag
     
     if ([[segue identifier] isEqualToString:@"DetalleProveedor"])
     {
-        DetalleProveedorViewController *detailViewController =
-        [segue destinationViewController];
+        DetalleProveedorViewController *detailViewController = [segue destinationViewController];
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow]; 
+        detailViewController.ProveedorPasado=[self.members objectAtIndex:indexPath.row];
         
         // and add any other code which you want to perform.
         
