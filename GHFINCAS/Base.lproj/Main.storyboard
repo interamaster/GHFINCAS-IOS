@@ -165,7 +165,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" id="adH-fW-zuz" userLabel="mainView">
-                                            <rect key="frame" x="16" y="16" width="351" height="263"/>
+                                            <rect key="frame" x="16" y="16" width="351" height="276"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="eo8-Uj-aCJ" userLabel="photo">
@@ -185,7 +185,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view alpha="0.28999999165534973" contentMode="scaleToFill" id="5gN-Eb-TrI" userLabel="namebg">
-                                                    <rect key="frame" x="0.0" y="199" width="351" height="32"/>
+                                                    <rect key="frame" x="0.0" y="200" width="351" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>

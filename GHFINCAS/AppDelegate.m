@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 
+#import <Parse/Parse.h>
+
+#import <Bolts/Bolts.h>
+ 
 @interface AppDelegate ()
 
 @end
@@ -17,6 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+  [Parse setApplicationId:@"mUj7ENzNhD4hm6o8ENhPqa5ZHAlM3QAjGnRgJu2V"
+                  clientKey:@"AFxz2VqXFvSVsa6UFwGe3QRKBVC7EdwHMgjiBbfN"];
+    
+    
+    
     
     
     
@@ -46,4 +57,20 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////PARSE//////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+///////////////////////////////////////////////////////////
+// Uncomment this method if you want to use Push Notifications with Background App Refresh
+///////////////////////////////////////////////////////////
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+//    if (application.applicationState == UIApplicationStateInactive) {
+//        [PFAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
+//    }
+//}
 @end
