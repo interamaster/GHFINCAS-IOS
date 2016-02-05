@@ -165,7 +165,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" id="adH-fW-zuz" userLabel="mainView">
-                                            <rect key="frame" x="16" y="16" width="351" height="276"/>
+                                            <rect key="frame" x="16" y="16" width="351" height="289"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" id="eo8-Uj-aCJ" userLabel="photo">
@@ -214,7 +214,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="elf-Vx-fwj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001.5" y="-1418.5"/>
+            <point key="canvasLocation" x="938.5" y="-1418.5"/>
         </scene>
         <!--Detalle Proveedor View Controller-->
         <scene sceneID="Ecv-pZ-CG1">
@@ -263,30 +263,57 @@
             <point key="canvasLocation" x="1563.5" y="-1418.5"/>
         </scene>
         <!--COMUNICADOS-->
-        <scene sceneID="ysZ-4q-Jq9">
+        <scene sceneID="Yoy-ax-D1C">
             <objects>
-                <viewController id="sBc-fe-8Db" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Lqw-lF-wQi">
+                <tableViewController id="wEo-U7-yhi" customClass="NotificacionesFromWebTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="zP7-dX-v6f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="COMUNCADOS" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="8DR-cF-5XO">
-                                <rect key="frame" x="68" y="278" width="265" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="COMUNICADOS" image="flat_comunicados" id="2aG-u0-54L"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificacionesCell" id="2Uw-HA-XfY" customClass="NotificacionesTableViewCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Uw-HA-XfY" id="A5F-et-B0H">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZVI-pr-qiH">
+                                            <rect key="frame" x="67" y="11" width="285" height="69"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="U9S-wc-Mbx">
+                                            <rect key="frame" x="67" y="78" width="159" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flat_comunicados.png" id="CzE-Rm-plj">
+                                            <rect key="frame" x="2" y="25" width="60" height="60"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="NotificacioenFechatexto" destination="U9S-wc-Mbx" id="za4-if-czp"/>
+                                    <outlet property="NotificacionTexto" destination="ZVI-pr-qiH" id="Nzj-gV-qgw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wEo-U7-yhi" id="peB-IM-5av"/>
+                            <outlet property="delegate" destination="wEo-U7-yhi" id="Sck-Iu-Tbk"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="COMUNICADOS" image="flat_comunicados" id="iXr-nC-fI3"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="I1h-Yh-M2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Z0-lH-sHU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="341.5" y="184.5"/>
+            <point key="canvasLocation" x="409.5" y="-2193.5"/>
         </scene>
         <!--INCIDENCIAS-->
         <scene sceneID="Xm6-U4-R6q">
@@ -582,7 +609,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="dRx-mU-Iaj" kind="relationship" relationship="viewControllers" id="gZf-Us-zkf"/>
-                        <segue destination="sBc-fe-8Db" kind="relationship" relationship="viewControllers" id="Yau-c9-DRb"/>
+                        <segue destination="wEo-U7-yhi" kind="relationship" relationship="viewControllers" id="bxP-r0-kWf"/>
                         <segue destination="N9Q-w8-Lex" kind="relationship" relationship="viewControllers" id="0SS-FZ-Mdh"/>
                         <segue destination="5xm-qo-YvD" kind="relationship" relationship="viewControllers" id="asM-Ny-25N"/>
                     </connections>
@@ -668,6 +695,7 @@
     <resources>
         <image name="flat_24h.png" width="128" height="128"/>
         <image name="flat_comunicados" width="25" height="25"/>
+        <image name="flat_comunicados.png" width="128" height="128"/>
         <image name="flat_comunidad" width="25" height="25"/>
         <image name="flat_empresaok2" width="25" height="25"/>
         <image name="flat_incidencias" width="25" height="25"/>

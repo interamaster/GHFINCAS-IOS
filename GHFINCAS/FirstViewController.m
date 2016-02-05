@@ -53,10 +53,10 @@
     
     
     
-    CLTickerView *ticker = [[CLTickerView alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
+    CLTickerView *ticker = [[CLTickerView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 30)];
     
     
-    ticker.marqueeStr =  @"esto es una pruabd e etco que se ira mobviendo dasd asd as d asd sd  sd sd  sd  sd sd d sd sd sd sa dsa dsa das das";
+    ticker.marqueeStr =  @"Somos especialistas en la gestión y administración de comunidades de propietarios. Nuestro compromiso es el de ofrecer el mejor servicio al mejor precio para obtener la confianza del propietario mediante nuestro esfuerzo y trabajo.";
     
     ticker.marqueeFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:15.0];
     [self.TextoMovible addSubview:ticker];

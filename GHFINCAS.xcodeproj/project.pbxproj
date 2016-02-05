@@ -43,6 +43,9 @@
 		C80A0EC01C576EF8003E2013 /* logo7redondo.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EBA1C576EF8003E2013 /* logo7redondo.png */; };
 		C80A0EC11C576EF8003E2013 /* logo7redondo 2.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EBB1C576EF8003E2013 /* logo7redondo 2.png */; };
 		C80A0EC21C576EF8003E2013 /* web.png in Resources */ = {isa = PBXBuildFile; fileRef = C80A0EBC1C576EF8003E2013 /* web.png */; };
+		C81E8BB31C6498FA0078AE93 /* NotificacionesFromWebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C81E8BB21C6498FA0078AE93 /* NotificacionesFromWebTableViewController.m */; };
+		C81E8BB71C6499610078AE93 /* NotificacionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C81E8BB61C6499610078AE93 /* NotificacionModel.m */; };
+		C81E8BBB1C64B1060078AE93 /* NotificacionesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C81E8BBA1C64B1060078AE93 /* NotificacionesTableViewCell.m */; };
 		C824AFDE1C5F9DE60099479F /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFDD1C5F9DE60099479F /* UITextView+Placeholder.m */; };
 		C824AFE41C5FC1320099479F /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFE11C5FC1320099479F /* KVNProgress.m */; };
 		C824AFE51C5FC1320099479F /* KVNProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFE31C5FC1320099479F /* KVNProgressConfiguration.m */; };
@@ -168,6 +171,12 @@
 		C80A0EBA1C576EF8003E2013 /* logo7redondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo7redondo.png; sourceTree = "<group>"; };
 		C80A0EBB1C576EF8003E2013 /* logo7redondo 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo7redondo 2.png"; sourceTree = "<group>"; };
 		C80A0EBC1C576EF8003E2013 /* web.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = web.png; sourceTree = "<group>"; };
+		C81E8BB11C6498FA0078AE93 /* NotificacionesFromWebTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificacionesFromWebTableViewController.h; sourceTree = "<group>"; };
+		C81E8BB21C6498FA0078AE93 /* NotificacionesFromWebTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificacionesFromWebTableViewController.m; sourceTree = "<group>"; };
+		C81E8BB51C6499610078AE93 /* NotificacionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificacionModel.h; sourceTree = "<group>"; };
+		C81E8BB61C6499610078AE93 /* NotificacionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificacionModel.m; sourceTree = "<group>"; };
+		C81E8BB91C64B1060078AE93 /* NotificacionesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificacionesTableViewCell.h; sourceTree = "<group>"; };
+		C81E8BBA1C64B1060078AE93 /* NotificacionesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificacionesTableViewCell.m; sourceTree = "<group>"; };
 		C824AFDC1C5F9DE60099479F /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
 		C824AFDD1C5F9DE60099479F /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
 		C824AFE01C5FC1320099479F /* KVNProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgress.h; sourceTree = "<group>"; };
@@ -325,6 +334,8 @@
 			children = (
 				7894432F1C612BE400386976 /* ProveedorModel.h */,
 				789443301C612BE400386976 /* ProveedorModel.m */,
+				C81E8BB51C6499610078AE93 /* NotificacionModel.h */,
+				C81E8BB61C6499610078AE93 /* NotificacionModel.m */,
 			);
 			name = WEBMODEL;
 			sourceTree = "<group>";
@@ -398,6 +409,17 @@
 				78C80B0F1C61E5EA00430008 /* UIView+WebCacheOperation.m */,
 			);
 			name = SDWebImage;
+			sourceTree = "<group>";
+		};
+		C81E8BB81C64B0E70078AE93 /* CELDAS */ = {
+			isa = PBXGroup;
+			children = (
+				7894432B1C61233000386976 /* ProveedoresCellTableViewCell.h */,
+				7894432C1C61233000386976 /* ProveedoresCellTableViewCell.m */,
+				C81E8BB91C64B1060078AE93 /* NotificacionesTableViewCell.h */,
+				C81E8BBA1C64B1060078AE93 /* NotificacionesTableViewCell.m */,
+			);
+			name = CELDAS;
 			sourceTree = "<group>";
 		};
 		C824AFDB1C5F9D970099479F /* TextView+PlaceHolder */ = {
@@ -485,6 +507,8 @@
 				C8862CCB1C5623B000FB905E /* AppDelegate.m */,
 				C8862CCD1C5623B000FB905E /* FirstViewController.h */,
 				C8862CCE1C5623B000FB905E /* FirstViewController.m */,
+				C81E8BB11C6498FA0078AE93 /* NotificacionesFromWebTableViewController.h */,
+				C81E8BB21C6498FA0078AE93 /* NotificacionesFromWebTableViewController.m */,
 				789443281C61201E00386976 /* ProveedoresTableViewController.h */,
 				789443291C61201E00386976 /* ProveedoresTableViewController.m */,
 				C8A4312B1C622D4900076758 /* DetalleProveedorViewController.h */,
@@ -499,8 +523,7 @@
 				C828959D1C5D1F3F00A9754F /* IncidenciaViewController.m */,
 				C828959F1C5D240900A9754F /* INCIDENCIAPOREMAILViewController.h */,
 				C82895A01C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m */,
-				7894432B1C61233000386976 /* ProveedoresCellTableViewCell.h */,
-				7894432C1C61233000386976 /* ProveedoresCellTableViewCell.m */,
+				C81E8BB81C64B0E70078AE93 /* CELDAS */,
 				C8862CD31C5623B000FB905E /* Main.storyboard */,
 				C8862CD61C5623B000FB905E /* Images.xcassets */,
 				C8862CD81C5623B000FB905E /* LaunchScreen.xib */,
@@ -726,10 +749,12 @@
 				C8A4312D1C622D4900076758 /* DetalleProveedorViewController.m in Sources */,
 				78C80B1D1C61E5EA00430008 /* UIImageView+HighlightedWebCache.m in Sources */,
 				C828959E1C5D1F3F00A9754F /* IncidenciaViewController.m in Sources */,
+				C81E8BBB1C64B1060078AE93 /* NotificacionesTableViewCell.m in Sources */,
 				C82895951C5D170D00A9754F /* HSK_CFUtilities.m in Sources */,
 				C824AFEC1C5FC14B0099479F /* UIColor+KVNContrast.m in Sources */,
 				78C80B1C1C61E5EA00430008 /* UIImage+WebP.m in Sources */,
 				C8A431291C62278700076758 /* ParallaxHeaderView.m in Sources */,
+				C81E8BB71C6499610078AE93 /* NotificacionModel.m in Sources */,
 				78C80B141C61E5EA00430008 /* SDWebImageDecoder.m in Sources */,
 				78C80B1B1C61E5EA00430008 /* UIImage+MultiFormat.m in Sources */,
 				78C80B121C61E5EA00430008 /* SDImageCache.m in Sources */,
@@ -753,6 +778,7 @@
 				C8A4312A1C62278700076758 /* UIImage+ImageEffects.m in Sources */,
 				C824AFED1C5FC14B0099479F /* UIImage+KVNEmpty.m in Sources */,
 				78C80B101C61E5EA00430008 /* MKAnnotationView+WebCache.m in Sources */,
+				C81E8BB31C6498FA0078AE93 /* NotificacionesFromWebTableViewController.m in Sources */,
 				78C80B1E1C61E5EA00430008 /* UIImageView+WebCache.m in Sources */,
 				7894432D1C61233000386976 /* ProveedoresCellTableViewCell.m in Sources */,
 				C82895A11C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m in Sources */,
