@@ -11,6 +11,15 @@
 
 #import "ILAlertView.h"
 
+
+//par el html
+
+#import "TFHpple.h"
+
+//para la correcion Comunidad segun email
+
+#import "CorrecionComunidadModel.h"
+
 @interface LoginViewController ()
 
 
@@ -77,7 +86,184 @@
         
     }
     
+    
+    if (PREF_NOMBRECMUNIDAD && PREF_EMAIL) {
+        
+        //si ya existen nombre comu y emailvecino chequeamos que esten ok:
+        
+          [self ChequearNombreComunidad];
+    }
+    
+   
 }
+
+
+
+
+-(void)ChequearNombreComunidad{
+    
+    
+ 
+
+//vamos a ahacerla ASYN del tiron!!:
+
+
+
+NSURL *myUrl = [NSURL URLWithString:@"https://jrdvsoft.wordpress.com/correcion-comunidad/"];
+NSURLRequest *myRequest = [NSURLRequest requestWithURL:myUrl
+                                           cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
+                                       timeoutInterval:10];
+
+DataNombrecomunidad = [[NSMutableData alloc] initWithLength:0];
+
+NSURLConnection *myConnection = [[NSURLConnection alloc] initWithRequest:myRequest delegate:self startImmediately:YES];
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////DELEGATE ASYN TASK//////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void) connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    [DataNombrecomunidad setLength:0];
+}
+
+- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    //aqui aun NO tenemos la web!!!
+    
+    [DataNombrecomunidad appendData:data];
+}
+
+- (void) connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    // The request has failed for some reason!
+    // Check the error var
+}
+
+- (void) connectionDidFinishLoading:(NSURLConnection *)connection {
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+    
+    
+    //download finished - data is available in myData.
+    //aqui ya tenemos la web!!!
+    
+    // NSLog(@"ya tenemos la web!! %@",DatanotificacionesTable);
+    
+   
+    //1ºhacemos el Parse a texto:
+    
+    
+    TFHpple *tutorialsParser=  [TFHpple hppleWithHTMLData:DataNombrecomunidad];
+    
+    
+    
+    NSString *tutorialsXpathQueryString = @"//table[@class='CorreccionComunidad']//tr";
+    
+    
+    
+    NSArray *tutorialsNodes = [tutorialsParser searchWithXPathQuery:tutorialsXpathQueryString];
+    
+    
+    if ([tutorialsNodes count] == 0)
+        NSLog(@"nothing there");
+    else
+        NSLog(@"There are %d nodes", [tutorialsNodes count]);
+    
+    
+    
+    
+    //2º)Filtramos
+    
+    NSMutableArray *newTutorials=[[  NSMutableArray alloc] initWithCapacity:0];
+    
+    NSUInteger index = 0;//para salatrno el peimrmor que son los titulo(header th)
+    
+    for ( TFHppleElement *element in  tutorialsNodes){
+        
+        
+        
+        if (index>0) {//la primera columa es el titulo de latable(email/comunidad/todos....no lo quiero
+            index++;
+            
+            //solo si es >0
+            
+            if (element.raw.length>0){
+                
+                //http://stackoverflow.com/questions/16849797/trying-to-pull-tabledata-out-from-html
+                
+                NSString *cadenadevuleta=element.raw;
+                
+                NSArray* separatedParts = [cadenadevuleta componentsSeparatedByString:@"<td>"];
+                NSMutableArray* arrayOfResults = [[NSMutableArray alloc] init];
+                for (int i = 1; i < separatedParts.count; i++) {
+                    NSRange range = [[separatedParts objectAtIndex:i] rangeOfString:@"</td>"];
+                    NSString *partialResult = [[separatedParts objectAtIndex:i] substringToIndex:range.location];
+                    [arrayOfResults addObject:partialResult];
+                    
+                    
+                    
+                }
+                
+                CorrecionComunidadModel *correEmail=[[CorrecionComunidadModel alloc]init ];
+                
+                [newTutorials addObject:correEmail];
+                
+                correEmail.WebComunidad=[arrayOfResults objectAtIndex:0];
+                correEmail.WebEmail=[arrayOfResults objectAtIndex:1];
+                
+                
+                //ahora chequeamos si es corecto o no:
+                
+                if ([correEmail.WebEmail isEqualToString:PREF_EMAIL] ) {
+                    //si esta en la lista es px hay que chequea el nombre  de la comunidad
+                    
+                    if ( [correEmail.WebComunidad isEqualToString:PREF_NOMBRECMUNIDAD]){
+                        
+                        //si ya esta cambiado de antes salimos
+                        
+                        break;
+                        
+                    }
+                    
+                    
+                    //guaradmos PREF con nombre OK
+                    
+                      NSLog(@"cambiada comunidad de :%@  a  %@ ",PREF_NOMBRECMUNIDAD , correEmail.WebComunidad);
+                    
+                    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+                    
+                
+                    [prefs setObject:correEmail.WebComunidad forKey:@"nombre_comunidad"];
+                    
+                    
+                    [prefs synchronize];
+                    
+                    NSLog(@"cambiada comunidad de :%@  a  %@ ",PREF_NOMBRECMUNIDAD , correEmail.WebComunidad);
+                    
+                    
+                    break;//con esto ya salimos dl for loop
+                    
+                }
+                
+                
+                
+            }
+        }
+        
+        index++;
+    }
+    
+    
+    
+    
+}
+
+
+
+
+
 
 -(void)EncontrarPassword{
     

@@ -46,6 +46,7 @@
 		C81E8BB31C6498FA0078AE93 /* NotificacionesFromWebTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C81E8BB21C6498FA0078AE93 /* NotificacionesFromWebTableViewController.m */; };
 		C81E8BB71C6499610078AE93 /* NotificacionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C81E8BB61C6499610078AE93 /* NotificacionModel.m */; };
 		C81E8BBB1C64B1060078AE93 /* NotificacionesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C81E8BBA1C64B1060078AE93 /* NotificacionesTableViewCell.m */; };
+		C81E8BBE1C64C4CE0078AE93 /* CorrecionComunidadModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C81E8BBD1C64C4CE0078AE93 /* CorrecionComunidadModel.m */; };
 		C824AFDE1C5F9DE60099479F /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFDD1C5F9DE60099479F /* UITextView+Placeholder.m */; };
 		C824AFE41C5FC1320099479F /* KVNProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFE11C5FC1320099479F /* KVNProgress.m */; };
 		C824AFE51C5FC1320099479F /* KVNProgressConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = C824AFE31C5FC1320099479F /* KVNProgressConfiguration.m */; };
@@ -177,6 +178,8 @@
 		C81E8BB61C6499610078AE93 /* NotificacionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificacionModel.m; sourceTree = "<group>"; };
 		C81E8BB91C64B1060078AE93 /* NotificacionesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificacionesTableViewCell.h; sourceTree = "<group>"; };
 		C81E8BBA1C64B1060078AE93 /* NotificacionesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificacionesTableViewCell.m; sourceTree = "<group>"; };
+		C81E8BBC1C64C4CE0078AE93 /* CorrecionComunidadModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorrecionComunidadModel.h; sourceTree = "<group>"; };
+		C81E8BBD1C64C4CE0078AE93 /* CorrecionComunidadModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorrecionComunidadModel.m; sourceTree = "<group>"; };
 		C824AFDC1C5F9DE60099479F /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
 		C824AFDD1C5F9DE60099479F /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
 		C824AFE01C5FC1320099479F /* KVNProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KVNProgress.h; sourceTree = "<group>"; };
@@ -336,6 +339,8 @@
 				789443301C612BE400386976 /* ProveedorModel.m */,
 				C81E8BB51C6499610078AE93 /* NotificacionModel.h */,
 				C81E8BB61C6499610078AE93 /* NotificacionModel.m */,
+				C81E8BBC1C64C4CE0078AE93 /* CorrecionComunidadModel.h */,
+				C81E8BBD1C64C4CE0078AE93 /* CorrecionComunidadModel.m */,
 			);
 			name = WEBMODEL;
 			sourceTree = "<group>";
@@ -758,6 +763,7 @@
 				78C80B141C61E5EA00430008 /* SDWebImageDecoder.m in Sources */,
 				78C80B1B1C61E5EA00430008 /* UIImage+MultiFormat.m in Sources */,
 				78C80B121C61E5EA00430008 /* SDImageCache.m in Sources */,
+				C81E8BBE1C64C4CE0078AE93 /* CorrecionComunidadModel.m in Sources */,
 				C824AFDE1C5F9DE60099479F /* UITextView+Placeholder.m in Sources */,
 				7894433A1C612D1900386976 /* TFHppleElement.m in Sources */,
 				789443411C616A0E00386976 /* NSString_stripHtml.m in Sources */,

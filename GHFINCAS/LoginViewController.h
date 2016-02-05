@@ -26,7 +26,11 @@
     //ivar para el numero de arranques
     int PREF_NUMERO_DEARRANQUES;
     
+    //para chequear nombre comunidad ok apartir email
     
+    
+    NSMutableData *DataNombrecomunidad;
+
 }
 
 
