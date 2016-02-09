@@ -18,7 +18,7 @@
 #import <MessageUI/MFMailComposeViewController.h>
 
 
-@interface SignupViewController : UIViewController<SKPSMTPMessageDelegate,MFMailComposeViewControllerDelegate>{
+@interface SignupViewController : UIViewController<SKPSMTPMessageDelegate,MFMailComposeViewControllerDelegate,UITextFieldDelegate>{
     
     NSString *PREF_EMAIL;
   

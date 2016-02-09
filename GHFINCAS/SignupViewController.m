@@ -57,7 +57,60 @@
     self.progresscircular.alpha=0.0;
     
     
+    //hacemos los textfields delagates:
+    
+    self.email.delegate=self;
+    self.telefono.delegate=self;
+    self.Nombre.delegate=self;
+    self.nombrecomunidad.delegate=self;
+    
+    
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    
 }
+
+-(void)dismissKeyboard {
+    [self.telefono resignFirstResponder];
+    [self.nombrecomunidad resignFirstResponder];
+    [self.Nombre resignFirstResponder];
+    [self.email resignFirstResponder];
+    
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////PARA delegate de los etxtfield
+ /////   y funcione next o no se puede completar  //registro/ ////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.Nombre) {
+        [self.email becomeFirstResponder];
+    }
+    else if (textField == self.email) {
+        [self.telefono becomeFirstResponder];
+    }
+    
+    else if (textField == self.telefono) {
+        [self.nombrecomunidad becomeFirstResponder];
+    }
+    
+    else{
+        [textField resignFirstResponder];
+    }
+    return YES;
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
