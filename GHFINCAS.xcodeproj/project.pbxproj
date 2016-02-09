@@ -63,6 +63,7 @@
 		C828959B1C5D1C4300A9754F /* ComunidadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C828959A1C5D1C4300A9754F /* ComunidadViewController.m */; };
 		C828959E1C5D1F3F00A9754F /* IncidenciaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C828959D1C5D1F3F00A9754F /* IncidenciaViewController.m */; };
 		C82895A11C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82895A01C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m */; };
+		C84BB3B31C6A720F00C12E52 /* horario.png in Resources */ = {isa = PBXBuildFile; fileRef = C84BB3B21C6A720F00C12E52 /* horario.png */; };
 		C88441E31C6279B800BB487F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88441E21C6279B800BB487F /* AudioToolbox.framework */; };
 		C88441E51C6279C700BB487F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88441E41C6279C700BB487F /* CoreGraphics.framework */; };
 		C88441E91C6279D800BB487F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88441E81C6279D800BB487F /* Security.framework */; };
@@ -211,6 +212,7 @@
 		C828959D1C5D1F3F00A9754F /* IncidenciaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncidenciaViewController.m; sourceTree = "<group>"; };
 		C828959F1C5D240900A9754F /* INCIDENCIAPOREMAILViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCIDENCIAPOREMAILViewController.h; sourceTree = "<group>"; };
 		C82895A01C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCIDENCIAPOREMAILViewController.m; sourceTree = "<group>"; };
+		C84BB3B21C6A720F00C12E52 /* horario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horario.png; sourceTree = "<group>"; };
 		C88441E21C6279B800BB487F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C88441E41C6279C700BB487F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C88441E61C6279CE00BB487F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -568,6 +570,7 @@
 		C8862CEF1C5768CC00FB905E /* iconos */ = {
 			isa = PBXGroup;
 			children = (
+				C84BB3B21C6A720F00C12E52 /* horario.png */,
 				C80A0EB71C576EF8003E2013 /* fondoghfincasactivity1.png */,
 				C80A0EB81C576EF8003E2013 /* jrdvsoftlogo.png */,
 				C80A0EB91C576EF8003E2013 /* logo7.jpg */,
@@ -675,6 +678,7 @@
 				TargetAttributes = {
 					C8862CC21C5623B000FB905E = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 4F37DRKF34;
 					};
 					C8862CDE1C5623B000FB905E = {
 						CreatedOnToolsVersion = 6.2;
@@ -728,6 +732,7 @@
 				788B65D61C57F82F00081ABB /* fondo2.jpg in Resources */,
 				C8862CD71C5623B000FB905E /* Images.xcassets in Resources */,
 				C8862CFF1C57693D00FB905E /* flat_incidencias1.png in Resources */,
+				C84BB3B31C6A720F00C12E52 /* horario.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,6 +924,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GHFINCAS",
@@ -932,6 +939,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -939,6 +947,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GHFINCAS",
@@ -952,6 +962,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

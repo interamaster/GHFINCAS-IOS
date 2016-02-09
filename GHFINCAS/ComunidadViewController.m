@@ -29,6 +29,13 @@
     
     
     NSMutableURLRequest * request =[NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://www.ghfincas.es/oficina-virtual"]];
+    
+    [request setTimeoutInterval:6];
+    
+    
+    
+    
+    
     self.webview.delegate=self;
     
     [self.webview loadRequest:request];
