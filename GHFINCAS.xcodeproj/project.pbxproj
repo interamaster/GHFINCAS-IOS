@@ -64,6 +64,7 @@
 		C828959E1C5D1F3F00A9754F /* IncidenciaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C828959D1C5D1F3F00A9754F /* IncidenciaViewController.m */; };
 		C82895A11C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C82895A01C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m */; };
 		C84BB3B31C6A720F00C12E52 /* horario.png in Resources */ = {isa = PBXBuildFile; fileRef = C84BB3B21C6A720F00C12E52 /* horario.png */; };
+		C84BB3B61C6A72A100C12E52 /* Main-5s.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84BB3B41C6A72A100C12E52 /* Main-5s.storyboard */; };
 		C88441E31C6279B800BB487F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88441E21C6279B800BB487F /* AudioToolbox.framework */; };
 		C88441E51C6279C700BB487F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88441E41C6279C700BB487F /* CoreGraphics.framework */; };
 		C88441E91C6279D800BB487F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88441E81C6279D800BB487F /* Security.framework */; };
@@ -213,6 +214,7 @@
 		C828959F1C5D240900A9754F /* INCIDENCIAPOREMAILViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INCIDENCIAPOREMAILViewController.h; sourceTree = "<group>"; };
 		C82895A01C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INCIDENCIAPOREMAILViewController.m; sourceTree = "<group>"; };
 		C84BB3B21C6A720F00C12E52 /* horario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horario.png; sourceTree = "<group>"; };
+		C84BB3B51C6A72A100C12E52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main-5s.storyboard"; sourceTree = "<group>"; };
 		C88441E21C6279B800BB487F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		C88441E41C6279C700BB487F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C88441E61C6279CE00BB487F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -532,6 +534,7 @@
 				C82895A01C5D240900A9754F /* INCIDENCIAPOREMAILViewController.m */,
 				C81E8BB81C64B0E70078AE93 /* CELDAS */,
 				C8862CD31C5623B000FB905E /* Main.storyboard */,
+				C84BB3B41C6A72A100C12E52 /* Main-5s.storyboard */,
 				C8862CD61C5623B000FB905E /* Images.xcassets */,
 				C8862CD81C5623B000FB905E /* LaunchScreen.xib */,
 				C8862CC61C5623B000FB905E /* Supporting Files */,
@@ -713,6 +716,7 @@
 				C80A0EC11C576EF8003E2013 /* logo7redondo 2.png in Resources */,
 				C8862CF91C57693D00FB905E /* FLAT INCIDENCIAS 2.png in Resources */,
 				788B65CF1C57EF2900081ABB /* alertBkg.png in Resources */,
+				C84BB3B61C6A72A100C12E52 /* Main-5s.storyboard in Resources */,
 				C824AFF41C5FC9D60099479F /* KVNProgressView.xib in Resources */,
 				C80A0EBF1C576EF8003E2013 /* logo7.jpg in Resources */,
 				C8862D011C57693D00FB905E /* flat_proveedores1.png in Resources */,
@@ -825,6 +829,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		C84BB3B41C6A72A100C12E52 /* Main-5s.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C84BB3B51C6A72A100C12E52 /* Base */,
+			);
+			name = "Main-5s.storyboard";
+			sourceTree = "<group>";
+		};
 		C8862CD31C5623B000FB905E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

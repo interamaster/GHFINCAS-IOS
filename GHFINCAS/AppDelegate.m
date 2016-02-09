@@ -28,12 +28,59 @@
     
     
     
+      int screenHeight = [UIScreen mainScreen].bounds.size.height;
+      NSLog(@"Screen Height is %i", screenHeight);
     
+    // grab correct storyboard depending on screen height
+    UIStoryboard *storyboard = [self grabStoryboard];
+    
+    // display storyboard
+    self.window.rootViewController = [storyboard instantiateInitialViewController];
+    [self.window makeKeyAndVisible];
     
     
     
     return YES;
 }
+
+
+- (UIStoryboard *)grabStoryboard {
+    
+    // determine screen size
+    int screenHeight = [UIScreen mainScreen].bounds.size.height;
+    UIStoryboard *storyboard;
+    
+    switch (screenHeight) {
+            
+            // iPhone 4s
+        case 480:
+            storyboard = [UIStoryboard storyboardWithName:@"Main-4s" bundle:nil];
+            break;
+            
+            // iPhone 5s
+        case 568:
+            storyboard = [UIStoryboard storyboardWithName:@"Main-5s" bundle:nil];
+            break;
+            
+            // iPhone 6
+        case 667:
+            storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            break;
+            
+            // iPhone 6 Plus
+        case 736:
+            storyboard = [UIStoryboard storyboardWithName:@"Main-6-Plus" bundle:nil];
+            break;
+            
+        default:
+            // it's an iPad
+            storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+            break;
+    }
+    
+    return storyboard;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
