@@ -70,8 +70,6 @@
 		C88441ED1C6279EA00BB487F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88441EC1C6279EA00BB487F /* SystemConfiguration.framework */; };
 		C88441EF1C627A0D00BB487F /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C88441EE1C627A0D00BB487F /* libz.1.1.3.dylib */; };
 		C88441F11C627A1900BB487F /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C88441F01C627A1900BB487F /* libsqlite3.dylib */; };
-		C88442021C62AC1F00BB487F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88442001C62AC1F00BB487F /* Bolts.framework */; };
-		C88442031C62AC1F00BB487F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C88442011C62AC1F00BB487F /* Parse.framework */; };
 		C8862CC91C5623B000FB905E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8862CC81C5623B000FB905E /* main.m */; };
 		C8862CCC1C5623B000FB905E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8862CCB1C5623B000FB905E /* AppDelegate.m */; };
 		C8862CCF1C5623B000FB905E /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8862CCE1C5623B000FB905E /* FirstViewController.m */; };
@@ -92,6 +90,8 @@
 		C8A431291C62278700076758 /* ParallaxHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A431261C62278700076758 /* ParallaxHeaderView.m */; };
 		C8A4312A1C62278700076758 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A431281C62278700076758 /* UIImage+ImageEffects.m */; };
 		C8A4312D1C622D4900076758 /* DetalleProveedorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A4312C1C622D4900076758 /* DetalleProveedorViewController.m */; };
+		C8B47E951C6A4D4E00AB20B5 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B47E931C6A4D4E00AB20B5 /* Bolts.framework */; };
+		C8B47E961C6A4D4E00AB20B5 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B47E941C6A4D4E00AB20B5 /* Parse.framework */; };
 		C8D6D5EA1C5FD8AB002DF570 /* CLScrollview.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6D5E71C5FD8AB002DF570 /* CLScrollview.m */; };
 		C8D6D5EB1C5FD8AB002DF570 /* CLTickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8D6D5E91C5FD8AB002DF570 /* CLTickerView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C8DEEB521C5BE5E200C8E6CC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8DEEB511C5BE5E200C8E6CC /* CFNetwork.framework */; };
@@ -222,8 +222,6 @@
 		C88441F61C62AA4100BB487F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		C88441F81C62AA5700BB487F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C88441FA1C62AA6000BB487F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		C88442001C62AC1F00BB487F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
-		C88442011C62AC1F00BB487F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C8862CC31C5623B000FB905E /* GHFINCAS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFINCAS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8862CC71C5623B000FB905E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8862CC81C5623B000FB905E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -254,6 +252,8 @@
 		C8A431281C62278700076758 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		C8A4312B1C622D4900076758 /* DetalleProveedorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetalleProveedorViewController.h; sourceTree = "<group>"; };
 		C8A4312C1C622D4900076758 /* DetalleProveedorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetalleProveedorViewController.m; sourceTree = "<group>"; };
+		C8B47E931C6A4D4E00AB20B5 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		C8B47E941C6A4D4E00AB20B5 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		C8D6D5E61C5FD8AB002DF570 /* CLScrollview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLScrollview.h; sourceTree = "<group>"; };
 		C8D6D5E71C5FD8AB002DF570 /* CLScrollview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLScrollview.m; sourceTree = "<group>"; };
 		C8D6D5E81C5FD8AB002DF570 /* CLTickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTickerView.h; sourceTree = "<group>"; };
@@ -270,10 +270,10 @@
 				C88441F11C627A1900BB487F /* libsqlite3.dylib in Frameworks */,
 				C88441EF1C627A0D00BB487F /* libz.1.1.3.dylib in Frameworks */,
 				C88441ED1C6279EA00BB487F /* SystemConfiguration.framework in Frameworks */,
-				C88442021C62AC1F00BB487F /* Bolts.framework in Frameworks */,
+				C8B47E951C6A4D4E00AB20B5 /* Bolts.framework in Frameworks */,
 				C88441EB1C6279E000BB487F /* StoreKit.framework in Frameworks */,
 				C88441E91C6279D800BB487F /* Security.framework in Frameworks */,
-				C88442031C62AC1F00BB487F /* Parse.framework in Frameworks */,
+				C8B47E961C6A4D4E00AB20B5 /* Parse.framework in Frameworks */,
 				C88441E51C6279C700BB487F /* CoreGraphics.framework in Frameworks */,
 				C8DEEB521C5BE5E200C8E6CC /* CFNetwork.framework in Frameworks */,
 				C88441E31C6279B800BB487F /* AudioToolbox.framework in Frameworks */,
@@ -457,8 +457,8 @@
 		C88441D51C62792D00BB487F /* PARSE */ = {
 			isa = PBXGroup;
 			children = (
-				C88442001C62AC1F00BB487F /* Bolts.framework */,
-				C88442011C62AC1F00BB487F /* Parse.framework */,
+				C8B47E931C6A4D4E00AB20B5 /* Bolts.framework */,
+				C8B47E941C6A4D4E00AB20B5 /* Parse.framework */,
 			);
 			name = PARSE;
 			sourceTree = "<group>";
